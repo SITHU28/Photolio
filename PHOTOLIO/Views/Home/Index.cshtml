@@ -1,0 +1,196 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<section class="backgraound">
+    <div class="ST-container">
+
+        <div class="row">
+            <div class="ST-row-padding" style="padding-top:35px;">
+                <img src="~/wwwroot/dist/images/Postersemple1.jpg" style="width:100%;max-height:612px; padding-top:20px; " class="ST-centered ST-animate-zoom" />
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+<!-------------------------------------------------------------------------Best Of Month------------------------------------------>
+
+<section class="saction4">
+    <div class="container" id="offer">
+        @*<div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="dotted3 os-animation" data-os-animation="bounceInLeft" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+                <div class="special">
+                    <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="0.50s" style="margin-bottom:50px;"><i class="fa fa-image"></i> Best Of Month</h2>
+                    <div class="dotted4 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+                </div>
+            </div>
+        </div>*@
+
+
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="dotted3 os-animation" data-os-animation="bounceInLeft" data-os-animation-delay="1.50s" style="margin-bottom:50px;"></div>
+            <div class="special">
+                <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="1.20s" style="margin-bottom:50px;">GALLERY</h2>
+                <div class="dotted4 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="1.50s" style="margin-bottom:50px;"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-15">
+                <div class="box box-primary">
+                    <div class="main-content">
+
+                        @foreach (var item in Model)
+                        {
+                            <div class="responsive ST-animate-zoomwelcome">
+                                <div class="overlaycontainer">
+                                    <div class="gallery ST-card ">
+                                        <img src="@(item.Photo)" alt="@item.Name" class="overlayimage">
+                                        <div class="ST-overlay">
+                                            <div class="ST-text-blue ST-galleryfont">
+                                                @item.Name
+                                            </div>
+                                            <table>
+                                                <tr style="float:left"><td style="color:white;width:100px;">Category :</td> <td><p><span style="color:white"> @item.CategoryName</span></p></td></tr>
+                                                <tr style="float:left"><td style="color:white;width:100px;">Descriptions :</td> <td><p><span style="color:white"> @item.Description</span></p></td></tr>
+                                                <tr style="float:left"><td style="color:white;width:100px;">Locations :</td><td><span style="color:red"> @item.Price </span></td></tr>
+                                            </table>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="desc ST-border">
+                                    <a href="#" class="ST-button  ST-round ST-blue " style="width:40%; margin-right:20px" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-bookmark"></i> Order</a>
+                                    <a href="#" class="ST-button  ST-round ST-blue-gray " style="width:40%" onclick="window.location = '/AddToCart/Add?Id=@item.Id';">Add <i class="fa fa-shopping-cart"></i></a>
+                                    @*<a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>*@
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="responsive ST-animate-zoom">
+                <div class="gallery ST-card">
+                    <a target="_blank" href="#">
+                        <img src="@(item.Photo)" alt="@item.Name" class="overlayimage">
+                    </a>
+                    <div class="desc ST-border">
+                        <p class="ST-left"><b>Description: <span style="color:red">@item.Description</span></b></p>
+                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                    </div>
+                </div>
+            </div>
+        }
+        <div class="row">
+            <button class="ST-button ST-black" onclick="gridfunction()" style="margin-bottom:15px;">Grid Padding View</button>
+            <br />
+            </div>
+            <div class="ST-row" id="myGrid" style="margin-bottom:100px">
+                @foreach (var item in Model)
+                {
+                    <div class="ST-third ST-animate-zoom">
+                        <img src="/GALLERY/@(item.Photo)" alt="@item.Name" class="overlayimage" style="width:100%">
+                    </div>
+
+                }
+            </div>
+            @*<div class="responsive ST-animate-zoom">
+                <div class="gallery ST-card">
+                    <a target="_blank" href="img_5terre.jpg">
+                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                    </a>
+                    <div class="desc ST-border">
+                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive ST-animate-zoom">
+                <div class="gallery ST-card">
+                    <a target="_blank" href="img_5terre.jpg">
+                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                    </a>
+                    <div class="desc ST-border">
+                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                    </div>
+                </div>
+            </div>
+            <div class="responsive ST-animate-zoom">
+                <div class="gallery ST-card">
+                    <a target="_blank" href="img_5terre.jpg">
+                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                    </a>
+                    <div class="desc ST-border">
+                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                    </div>
+                </div>
+            </div>*@
+        </div>
+</section>
+<!--------------------------------------------GALLERY--------------------------------------------------->
+<!-------------------------------------------Why Should Choose PHOTOLIO---------------------------------->
+<section class="saction7">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="dotted11 os-animation" data-os-animation="bounceInLeft" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+                <div class="special">
+                    <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="0.50s" style="margin-bottom:50px;">Why Should Choose PHOTOLIO</h2>
+                    <div class="dotted12 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12">
+                <figure class="service os-animation" data-os-animation="fadeInDown" data-os-animation-delay="1s"> <img src="~/wwwroot/dist/images/plan.png" alt="" /> </figure>
+                <div class="det os-animation" data-os-animation="fadeInDown" data-os-animation-delay="1.3s">
+                    <h3>Our Aim </h3>
+                    <p>We Promise Fast and Confortable to communicate between photographers and clients.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12">
+                <figure class="service os-animation" data-os-animation="fadeInDown" data-os-animation-delay="1.5s"> <img src="~/wwwroot/dist/images/mak.png" alt="" /> </figure>
+                <div class="det os-animation" data-os-animation="fadeInDown" data-os-animation-delay="1.8s">
+                    <h3>Our Value </h3>
+                    <p>We are the Best online service that can get in one place at Yangon. Our service is available for 12 hours a day / 7 days a week. We guarantee you for our Service 100%.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <figure class="service os-animation" data-os-animation="fadeInDown" data-os-animation-delay="2s"> <img src="~/wwwroot/dist/images/kljj.png" alt="" /> </figure>
+                <div class="det os-animation" data-os-animation="fadeInDown" data-os-animation-delay="2.3s">
+                    <h3>About Us </h3>
+                    <p>We have the best Photographers. We guarantee you, it'll be the best and precious your time you have ever been before.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Toggle grid padding
+    function gridfunction() {
+        var x = document.getElementById("myGrid");
+        if (x.className === "ST-row") {
+            x.className = "ST-row-padding";
+        } else {
+            x.className = x.className.replace("ST-row-padding", "ST-row");
+        }
+        }
+    </script>
+
+

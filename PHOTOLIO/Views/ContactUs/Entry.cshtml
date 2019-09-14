@@ -1,0 +1,96 @@
+﻿@model PHOTOLIO.ViewModel.ContactUsVM
+@{
+    ViewBag.Title = "Contact Us";
+    ViewBag.SubTitle = "";
+}
+
+<body>
+    @*--------------------------------------------MAP---------------------------------------*@
+    @*<section class="saction7">
+        <div class="container">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="special">
+                    <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="1s">Our Location</h2>
+                </div>
+                <figure class="food os-animation" data-os-animation="fadeInDown" data-os-animation-delay="0.50s">
+                    <div id="googleMap" style="height:400px;width:100%;margin-top:30px;"></div>
+                </figure>
+            </div>
+        </div>
+    </section>*@
+
+    <!-- Container (Contact Section) -->
+    <div class="container-fluid1">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="dotted3 os-animation" data-os-animation="bounceInLeft" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+            <div class="special">
+                <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="0.50s" style="margin-bottom:50px;">Contact Us</h2>
+                <div class="dotted4 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+            </div>
+        </div>
+        <figure class="food os-animation" data-os-animation="fadeInDown" data-os-animation-delay="0.50s">
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>Contact us and we'll get back to you within 24 hours.</p>
+                    <p><span class="fa fa-map-marker"></span> Sanchaung, Yangon, Myanmar</p>
+                    <p><span class="fa fa-mobile-phone"></span> Phone: +95 9428 322 097</p>
+                    <p><span class="fa fa-envelope "></span> Email: photolio.mm@gmail.com</p>
+                </div>
+                <form id="frmContactUs">
+                    <div class="col-sm-7 slideanim">
+                        <div class="row">
+                            <div class="col-sm-6 form-group">                              
+                                <input class="form-control" id="CTtxtName" name="CTtxtName" placeholder="Name" type="text" required="required">
+                            </div>
+                            <div class="col-sm-6 form-group">
+                                <input class="form-control" id="CTtxtEmail" name="CTtxtEmail" placeholder="Email" type="email" required="required">
+                            </div>
+                        </div>
+                        <textarea class="form-control" id="CTtxtMessage" name="CTtxtMessage" placeholder="Message" rows="5" required></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button style="margin-right:20px;" type="button" class="ST-button ST-blue ST-section ST-right" onclick="saveCTU()"><i class="fa fa-paper-plane"></i> SEND MESSAGE</button>
+                            <button type="button" class="ST-button ST-section ST-red ST-margin-right ST-border ST-right" onclick="window.location='/Home/Index'"><i class="fa fa-sign-out"></i> Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </figure>
+    </div>
+</body>
+@*</html>*@
+
+<div class="modal" id="divSuccess" style="margin-top:80px;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <center>
+                    <img src="~/wwwroot/dist/images/PhotolioCircleicon.ico" style="width:50px;height:50px" />
+                    <h4 class="modal-title">Contact Us</h4>
+                </center>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                
+            </div>
+            <div class="modal-body">
+                <p id="pMessage"></p>
+            </div>
+            <div class="modal-footer">
+               
+                    <button type="button" class="ST-button ST-round ST-blue" data-dismiss="modal" onclick="window.location = '/ContactUs/Entry';">OK</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+@section scripts{
+<script src="~/wwwroot/mine/js/LogIn.js"></script>
+    <script src="~/wwwroot/mine/js/ContactUs.js"></script>
+    <script>
+        setValidationRule();
+    </script>
+}

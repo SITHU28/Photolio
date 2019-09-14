@@ -1,0 +1,258 @@
+﻿
+@model PHOTOLIO.ViewModel.OrderVM
+
+@{
+    ViewBag.Title ="Photographers' Gallery";
+}
+
+<body>
+
+    <div class="container-fluid1">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="dotted3 os-animation" data-os-animation="bounceInLeft" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+            <div class="special">
+                <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="0.50s" style="margin-bottom:50px;">My Gallery</h2>
+                <div class="dotted4 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @{
+                    var currentUser = (PHOTOLIO.ViewModel.UserVM)Session["CurrentUser"];
+                }
+                @if (currentUser == null) //default
+                {
+                    <!-- form start -->
+                    <form id="frmProducts">
+                        <div class="box box-success">
+                            <div class="box-header with-border">
+                                <div class="box-header with-border">
+
+                                    <button type="button" class="ST-button  ST-blue ST-left" onclick="window.location = '/Product/Entry';">ADD PHOTO</button>
+
+                                    @*<button type="button" class="btn btn-success ">Checkout</button>*@
+                                    <br />
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="box-body table-responsive">
+                                <table id="tblMyOrderList" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2-info">
+                                    <thead>
+                                        <tr style="background-color:dodgerblue; color:white">
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Date</th>
+                                            <th>Quantity</th>
+                                            <th>TotalPrice</th>
+                                            <th>Address</th>
+                                            <th>Township</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.OrderVMs)
+                                        {
+                                            <tr style="color:black">
+                                                <td>@item.ProductName</td>
+                                                <td>@item.Price</td>
+                                                <td>@item.Date.ToString().Insert(4, "-").Insert(7, "-")</td>
+                                                <td>@item.Quantity</td>
+                                                <td>@item.TotalPrice</td>
+                                                <td>@item.Address</td>
+                                                <td>@item.Township</td>
+                                                @*<td><a href="/Order/Edit?id=@item.Id" class="btn btn-success">Edit</a></td>*@
+                                                <td><a class="ST-button ST-round ST-red " data-toggle="modal" onclick="setRemoveData('@item.Id', '@item.Version')" data-target="#divConfirm">Delete</a></td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                }
+                else if (currentUser.PositionId == 1) //admin
+                {
+                  
+                    <!-- form start -->
+                    <form id="frmProducts">
+                        <div class="box box-success">
+                            <div class="box-header with-border">
+                                <div class="box-header with-border">
+
+                                    <button type="button" class="ST-button  ST-blue ST-left" onclick="window.location = '/Product/Entry';">ADD PHOTO</button>
+
+                                    @*<button type="button" class="btn btn-success ">Checkout</button>*@
+                                    <br />
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="box-body table-responsive">
+                                <table id="tblMyOrderList" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2-info">
+                                    <thead>
+                                        <tr style="background-color:dodgerblue; color:white">
+                                            <th>Customer</th>
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Date</th>
+                                            <th>Quantity</th>
+                                            <th>TotalPrice</th>
+                                            <th>Address</th>
+                                            <th>Township</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.OrderVMs)
+                                        {
+                                            <tr style="color:black">
+                                                <td>@item.UserId</td>
+                                                <td>@item.ProductName</td>
+                                                <td>@item.Price</td>
+                                                <td>@item.Date.ToString().Insert(4, "-").Insert(7, "-")</td>
+                                                <td>@item.Quantity</td>
+                                                <td>@item.TotalPrice</td>
+                                                <td>@item.Address</td>
+                                                <td>@item.Township</td>
+                                                @*<td><a href="/Order/Edit?id=@item.Id" class="btn btn-success">Edit</a></td>*@
+                                                <td><a class="ST-button ST-round ST-red " data-toggle="modal" onclick="setRemoveData('@item.Id', '@item.Version')" data-target="#divConfirm">Delete</a></td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                }
+                else
+                {
+                    <!-- form start -->
+                    <form id="frmProducts">
+                        <div class="box box-success">
+                            <div class="box-header with-border">
+                                <div class="box-header with-border">
+
+                                    <button type="button" class="ST-button ST-round  ST-blue ST-left" onclick="window.location = '/Product/Entry';">ADD PHOTO</button>
+
+                                    @*<button type="button" class="btn btn-success ">Checkout</button>*@
+                                    <br />
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="box-body table-responsive">
+                                <table id="tblMyOrderList" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2-info">
+                                    <thead>
+                                        <tr style="background-color:dodgerblue; color:white">
+                                           
+                                            <th>Name</th>
+                                            <th>Price</th>
+                                            <th>Date</th>
+                                            <th>Quantity</th>
+                                            <th>TotalPrice</th>
+                                            <th>Address</th>
+                                            <th>Township</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.OrderVMs)
+                                        {
+                                        <tr style="color:black">
+                                           
+                                            <td>@item.ProductName</td>
+                                            <td>@item.Price</td>
+                                            <td>@item.Date.ToString().Insert(4, "-").Insert(7, "-")</td>
+                                            <td>@item.Quantity</td>
+                                            <td>@item.TotalPrice</td>
+                                            <td>@item.Address</td>
+                                            <td>@item.Township</td>
+                                            @*<td><a href="/Order/Edit?id=@item.Id" class="btn btn-success">Edit</a></td>*@
+                                            <td><a class="ST-button ST-round ST-red" data-toggle="modal" onclick="setRemoveData('@item.Id', '@item.Version')" data-target="#divConfirm">Delete</a></td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                }
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="divConfirm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="margin-top:80px;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <center>
+                        <img src="~/wwwroot/dist/images/PhotolioCircleicon.ico" style="width:50px;height:50px" />
+                        <h4 class="modal-title" id="myModalLabel">Position List</h4>
+                    </center>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    @*<h4 class="modal-title" id="myModalLabel">Position List</h4>*@
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure to delete?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="ST-button ST-round ST-gray" data-dismiss="modal">No</button>
+                    <button type="button" class="ST-button ST-round ST-blue " onclick="remove()">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="divSuccess" style="margin-top:80px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <center>
+                        <img src="~/wwwroot/dist/images/PhotolioCircleicon.ico" style="width:50px;height:50px" />
+                        <h4 class="modal-title">Position List</h4>
+                    </center>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    @*<h4 class="modal-title">Position List</h4>*@
+                </div>
+                <div class="modal-body">
+                    <p id="pMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="ST-button ST-round ST-blue " data-dismiss="modal" onclick="window.location = '/Order/MyOrderList?userId=@Model.UserId';">OK</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</body>
+
+
+
+@section scripts{
+   <script src="~/wwwroot/mine/js/Order.js"></script>
+    <script>      
+        setValidationRule();
+        $('#txtDate').datetimepicker({
+            format: "YYYY-MM-DD",
+            allowInputToggle: true,
+            showClose: true,
+            showTodayButton: true,
+        });
+        $("#tblMyOrderList").DataTable();
+    </script>
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

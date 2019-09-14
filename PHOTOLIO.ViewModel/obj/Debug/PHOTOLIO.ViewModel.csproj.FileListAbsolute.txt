@@ -1,0 +1,24 @@
+A:\L 6\PHOTOLIO\ACE.ViewModel\bin\Debug\PHOTOLIO.ViewModel.dll
+A:\L 6\PHOTOLIO\ACE.ViewModel\bin\Debug\PHOTOLIO.ViewModel.pdb
+A:\L 6\PHOTOLIO\ACE.ViewModel\obj\Debug\PHOTOLIO.ViewModel.csprojAssemblyReference.cache
+A:\L 6\PHOTOLIO\ACE.ViewModel\obj\Debug\PHOTOLIO.ViewModel.csproj.CoreCompileInputs.cache
+A:\L 6\PHOTOLIO\ACE.ViewModel\obj\Debug\PHOTOLIO.ViewModel.dll
+A:\L 6\PHOTOLIO\ACE.ViewModel\obj\Debug\PHOTOLIO.ViewModel.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO.ViewModel\bin\Debug\PHOTOLIO.ViewModel.dll
+A:\L 6\PHOTOLIO\PHOTOLIO.ViewModel\bin\Debug\PHOTOLIO.ViewModel.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.csproj.CoreCompileInputs.cache
+A:\L 6\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.dll
+A:\L 6\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.csprojAssemblyReference.cache
+A:\PHOTOLIO\PHOTOLIO.ViewModel\bin\Debug\PHOTOLIO.ViewModel.dll
+A:\PHOTOLIO\PHOTOLIO.ViewModel\bin\Debug\PHOTOLIO.ViewModel.pdb
+A:\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.csprojAssemblyReference.cache
+A:\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.csproj.CoreCompileInputs.cache
+A:\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.dll
+A:\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.pdb
+F:\BACKUP\PHOTOLIO\PHOTOLIO.ViewModel\bin\Debug\PHOTOLIO.ViewModel.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO.ViewModel\bin\Debug\PHOTOLIO.ViewModel.pdb
+F:\BACKUP\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.csprojAssemblyReference.cache
+F:\BACKUP\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.csproj.CoreCompileInputs.cache
+F:\BACKUP\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO.ViewModel\obj\Debug\PHOTOLIO.ViewModel.pdb

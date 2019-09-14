@@ -1,0 +1,70 @@
+﻿@model PHOTOLIO.ViewModel.CategoryVM
+@{
+    ViewBag.Title = "Category Edit (Admin)";
+}
+<section class="editsection">
+    <div class="container" style="margin-top:100px;">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-success">
+                    <!-- form start -->
+                    <form class="form-horizontal" id="frmCategory">
+                        
+                        <div class="box-body">
+                            <div class="form-group">
+
+                                <input type="hidden" id="hidId" value="@Model.Id" />
+                                <input type="hidden" id="hidVersion" value="@Model.Version" />
+
+                                <label for="txtName" class="col-sm-2 control-label">Category Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="txtName" name="txtName" value="@Model.Name" onkeypress="enter(event);" placeholder="Category Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-header with-border">
+                            <div class=" pull-right">
+                                <button type="button" class="btn btn-success" onclick="update()">Update</button>
+                                <button type="button" class="btn btn-default" onclick="window.location='/Category/List'">Cancel</button>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+</section>
+
+<div class="modal" id="divSuccess" style="margin-top:80px;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <center>
+                    <img src="~/wwwroot/dist/images/PhotolioCircleicon.ico" style="width:50px;height:50px" />
+                    <h4 class="modal-title">Edit Category</h4>
+                </center>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p id="pMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="ST-button ST-round ST-blue " data-dismiss="modal" onclick="window.location = '/Category/List'">Ok</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>        
+
+@section scripts{
+    @*<script src="~/wwwroot/mine/js/Category.js"></script>
+    <script src="~/wwwroot/mine/js/LogIn.js"></script>*@
+    <script>
+                setValidationRule();
+    </script>
+}        

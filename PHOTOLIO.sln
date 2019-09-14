@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHOTOLIO", "PHOTOLIO\PHOTOLIO.csproj", "{04A92EB5-797D-476E-95D4-646BF06293BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHOTOLIO.DataModel", "PHOTOLIO.DataModel\PHOTOLIO.DataModel.csproj", "{83A8A91C-B891-48AB-910D-ED04B33F7222}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHOTOLIO.Service", "PHOTOLIO.Service\PHOTOLIO.Service.csproj", "{E98B2054-04A0-4D1C-879B-E9C6809505BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHOTOLIO.ViewModel", "PHOTOLIO.ViewModel\PHOTOLIO.ViewModel.csproj", "{08F68B9C-935C-4190-B7AE-0F95F3DAD192}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04A92EB5-797D-476E-95D4-646BF06293BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04A92EB5-797D-476E-95D4-646BF06293BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04A92EB5-797D-476E-95D4-646BF06293BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A92EB5-797D-476E-95D4-646BF06293BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A8A91C-B891-48AB-910D-ED04B33F7222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A8A91C-B891-48AB-910D-ED04B33F7222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A8A91C-B891-48AB-910D-ED04B33F7222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A8A91C-B891-48AB-910D-ED04B33F7222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E98B2054-04A0-4D1C-879B-E9C6809505BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E98B2054-04A0-4D1C-879B-E9C6809505BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E98B2054-04A0-4D1C-879B-E9C6809505BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E98B2054-04A0-4D1C-879B-E9C6809505BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08F68B9C-935C-4190-B7AE-0F95F3DAD192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08F68B9C-935C-4190-B7AE-0F95F3DAD192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08F68B9C-935C-4190-B7AE-0F95F3DAD192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08F68B9C-935C-4190-B7AE-0F95F3DAD192}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {015FBDD8-DBF8-464B-86FA-A6ECA5CF9311}
+	EndGlobalSection
+EndGlobal

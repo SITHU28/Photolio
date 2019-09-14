@@ -1,0 +1,268 @@
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\csc.exe
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\System.Collections.Immutable.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\System.Reflection.Metadata.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\vbc.exe
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\VBCSCompiler.exe
+A:\L 6\PHOTOLIO\ACE.Web\bin\roslyn\VBCSCompiler.exe.config
+A:\L 6\PHOTOLIO\ACE.Web\bin\PHOTOLIO.dll.config
+A:\L 6\PHOTOLIO\ACE.Web\bin\PHOTOLIO.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\PHOTOLIO.pdb
+A:\L 6\PHOTOLIO\ACE.Web\bin\ACE.DataModel.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\ACE.Service.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\ACE.ViewModel.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\EntityFramework.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\EntityFramework.Extended.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\EntityFramework.SqlServer.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\Microsoft.Web.Infrastructure.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Helpers.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Mvc.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Razor.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Webpages.Deployment.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Webpages.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Webpages.Razor.dll
+A:\L 6\PHOTOLIO\ACE.Web\bin\ACE.DataModel.pdb
+A:\L 6\PHOTOLIO\ACE.Web\bin\ACE.Service.pdb
+A:\L 6\PHOTOLIO\ACE.Web\bin\ACE.ViewModel.pdb
+A:\L 6\PHOTOLIO\ACE.Web\bin\EntityFramework.xml
+A:\L 6\PHOTOLIO\ACE.Web\bin\EntityFramework.Extended.xml
+A:\L 6\PHOTOLIO\ACE.Web\bin\EntityFramework.Extended.dll.config
+A:\L 6\PHOTOLIO\ACE.Web\bin\EntityFramework.SqlServer.xml
+A:\L 6\PHOTOLIO\ACE.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Razor.xml
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Webpages.xml
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Webpages.Deployment.xml
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Webpages.Razor.xml
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Helpers.xml
+A:\L 6\PHOTOLIO\ACE.Web\bin\System.Web.Mvc.xml
+A:\L 6\PHOTOLIO\ACE.Web\obj\Debug\PHOTOLIO.csprojAssemblyReference.cache
+A:\L 6\PHOTOLIO\ACE.Web\obj\Debug\PHOTOLIO.csproj.CoreCompileInputs.cache
+A:\L 6\PHOTOLIO\ACE.Web\obj\Debug\PHOTOLIO.csproj.CopyComplete
+A:\L 6\PHOTOLIO\ACE.Web\obj\Debug\PHOTOLIO.dll
+A:\L 6\PHOTOLIO\ACE.Web\obj\Debug\PHOTOLIO.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\VBCSCompiler.exe
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\csc.exe
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CSharp.Core.targets
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.VisualBasic.Core.targets
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\System.Collections.Immutable.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\System.Reflection.Metadata.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\vbc.exe
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\roslyn\VBCSCompiler.exe.config
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.dll.config
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\EntityFramework.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\EntityFramework.SqlServer.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\Microsoft.Web.Infrastructure.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.DataModel.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.Service.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.ViewModel.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Helpers.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Mvc.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Razor.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Deployment.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Razor.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.DataModel.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.Service.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.ViewModel.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\EntityFramework.xml
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.xml
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.dll.config
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\EntityFramework.SqlServer.xml
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Razor.xml
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.xml
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Deployment.xml
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Razor.xml
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Helpers.xml
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\System.Web.Mvc.xml
+A:\L 6\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csprojAssemblyReference.cache
+A:\L 6\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csproj.CoreCompileInputs.cache
+A:\L 6\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csproj.CopyComplete
+A:\L 6\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\Facebook.dll
+A:\L 6\PHOTOLIO\PHOTOLIO\bin\Facebook.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\csc.exe
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\System.Collections.Immutable.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\System.Reflection.Metadata.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\vbc.exe
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\VBCSCompiler.exe
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\VBCSCompiler.exe.config
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.dll.config
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.pdb
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.SqlServer.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Facebook.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Microsoft.Web.Infrastructure.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.DataModel.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.Service.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.ViewModel.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Helpers.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Mvc.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Razor.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Deployment.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Razor.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.DataModel.pdb
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.Service.pdb
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.ViewModel.pdb
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.dll.config
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.SqlServer.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Facebook.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Razor.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Deployment.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Razor.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Helpers.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Mvc.xml
+E:\BACKUP\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csprojAssemblyReference.cache
+E:\BACKUP\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csproj.CoreCompileInputs.cache
+E:\BACKUP\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csproj.CopyComplete
+E:\BACKUP\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.dll
+E:\BACKUP\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.pdb
+A:\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csprojAssemblyReference.cache
+A:\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csproj.CoreCompileInputs.cache
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\csc.exe
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.dll
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CSharp.Core.targets
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.VisualBasic.Core.targets
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\System.Collections.Immutable.dll
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\System.Reflection.Metadata.dll
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\vbc.exe
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\VBCSCompiler.exe
+A:\PHOTOLIO\PHOTOLIO\bin\roslyn\VBCSCompiler.exe.config
+A:\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.dll.config
+A:\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.dll
+A:\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.pdb
+A:\PHOTOLIO\PHOTOLIO\bin\EntityFramework.dll
+A:\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.dll
+A:\PHOTOLIO\PHOTOLIO\bin\EntityFramework.SqlServer.dll
+A:\PHOTOLIO\PHOTOLIO\bin\Facebook.dll
+A:\PHOTOLIO\PHOTOLIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+A:\PHOTOLIO\PHOTOLIO\bin\Microsoft.Web.Infrastructure.dll
+A:\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.DataModel.dll
+A:\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.Service.dll
+A:\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.ViewModel.dll
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Helpers.dll
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Mvc.dll
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Razor.dll
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Deployment.dll
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.dll
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Razor.dll
+A:\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.DataModel.pdb
+A:\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.Service.pdb
+A:\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.ViewModel.pdb
+A:\PHOTOLIO\PHOTOLIO\bin\EntityFramework.xml
+A:\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.xml
+A:\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.dll.config
+A:\PHOTOLIO\PHOTOLIO\bin\EntityFramework.SqlServer.xml
+A:\PHOTOLIO\PHOTOLIO\bin\Facebook.xml
+A:\PHOTOLIO\PHOTOLIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Razor.xml
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.xml
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Deployment.xml
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Webpages.Razor.xml
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Helpers.xml
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Mvc.xml
+A:\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csproj.CopyComplete
+A:\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.dll
+A:\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.pdb
+A:\PHOTOLIO\PHOTOLIO\bin\Newtonsoft.Json.dll
+A:\PHOTOLIO\PHOTOLIO\bin\System.Net.Http.Formatting.dll
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Http.dll
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Http.WebHost.dll
+A:\PHOTOLIO\PHOTOLIO\bin\Newtonsoft.Json.xml
+A:\PHOTOLIO\PHOTOLIO\bin\System.Net.Http.Formatting.xml
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Http.xml
+A:\PHOTOLIO\PHOTOLIO\bin\System.Web.Http.WebHost.xml
+A:\PHOTOLIO\PHOTOLIO\bin\Json.dll
+A:\PHOTOLIO\PHOTOLIO\bin\Json.pdb
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\csc.exe
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\System.Collections.Immutable.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\System.Reflection.Metadata.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\vbc.exe
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\VBCSCompiler.exe
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\roslyn\VBCSCompiler.exe.config
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.dll.config
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.pdb
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.SqlServer.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Facebook.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Json.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Microsoft.Web.Infrastructure.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Newtonsoft.Json.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.DataModel.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.Service.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.ViewModel.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Net.Http.Formatting.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Helpers.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Http.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Http.WebHost.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Mvc.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Razor.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.WebPages.Deployment.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.WebPages.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.WebPages.Razor.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.DataModel.pdb
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.Service.pdb
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\PHOTOLIO.ViewModel.pdb
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.Extended.dll.config
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\EntityFramework.SqlServer.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Facebook.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Json.pdb
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\Newtonsoft.Json.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Net.Http.Formatting.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Helpers.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Http.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Http.WebHost.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Mvc.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.Razor.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.WebPages.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.WebPages.Deployment.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\bin\System.Web.WebPages.Razor.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csprojAssemblyReference.cache
+F:\BACKUP\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csproj.CoreCompileInputs.cache
+F:\BACKUP\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.csproj.CopyComplete
+F:\BACKUP\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO\obj\Debug\PHOTOLIO.pdb

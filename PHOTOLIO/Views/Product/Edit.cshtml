@@ -1,0 +1,138 @@
+﻿@model PHOTOLIO.ViewModel.ProductVM
+@{
+    ViewBag.Title = "Product Edit";
+}
+@{
+    var currentUser = (PHOTOLIO.ViewModel.UserVM)Session["CurrentUser"];
+
+}
+@*<!doctype html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pizza</title>
+        <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700' rel='stylesheet' type='text/css' />
+
+        <!--MOBILE DEVICE-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/font-awesome.css" />
+        <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/responsive.css" />
+        <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/imgoverlay.css" />
+
+        <!--JS-->
+
+        <script type="text/javascript" src="~/wwwroot/dist/js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="~/wwwroot/dist/js/modernizr.js"></script>
+        <script src="~/wwwroot/dist/js/scripts.js"></script>
+        <script src="~/wwwroot/dist/js/waypoints.min.js"></script>
+
+    </head>*@
+<body>
+    <section class="editsection">
+        <div class="container" style="margin-top:100px;">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-success">
+                        <!-- form start -->
+                        <form class="form-horizontal" id="frmProduct">
+                            <input type="hidden" id="hidId" value="@Model.Id" />
+                            <input type="hidden" id="hidVersion" value="@Model.Version" />
+                            <input type="hidden" id="hiUserId" value="@currentUser.Id">
+                            <div class="box-header with-border">
+                                <div class=" pull-right">
+                                    <button type="button" class="btn btn-success" onclick="update()">Update</button>
+                                    <button type="button" class="btn btn-default" onclick="window.location='/Product/List'">Cancel</button>
+                                </div>
+                            </div><br />
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <input type="hidden" id="hidId" value="@Model.Id" />
+                                    <input type="hidden" id="hidVersion" value="@Model.Version" />
+                                    <input type="hidden" id="hiUserId" value="@currentUser.Id">
+                                    <label for="selImage" class="col-sm-2 control-label">Photo</label>
+                                    <div class="form-group">
+                                        <img id="imgPrev" src="data:image;base64,@(Model.Photo)" width="80" height="80" />
+                                        <input type="file" id="selImage" name="selImage" accept="image/*" onchange="ShowPreview(this)">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtName" class="col-sm-2 control-label">Name</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="txtName" name="txtName" value="@Model.Name" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtDescription" class="col-sm-2 control-label">Descriptions</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="txtDescription" name="txtDescription" value="@Model.Description" placeholder="Ingredient">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtPrice" class="col-sm-2 control-label">Price</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="txtPrice" name="txtPrice" value="@Model.Price">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="selCategory" class="col-sm-2 control-label">Category</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control" id="selCategory" name="selCategory">
+                                            <option value="">Select Category</option>
+                                            @foreach (var item in Model.CategoryVMs)
+                                            {
+                                                <option value="@item.Id">@item.Name</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="modal" id="divSuccess" style="margin-top:80px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <center>
+                        <img src="~/wwwroot/dist/images/PhotolioCircleicon.ico" style="width:50px;height:50px" />
+                        <h4 class="modal-title">Edit Product</h4>
+                    </center>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="pMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="ST-button ST-round ST-blue" data-dismiss="modal" onclick="window.location = '/Product/List'">Ok</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    @section scripts{
+        <script src="~/wwwroot/mine/js/Product.js"></script>
+        <script>
+        setValidationRule();
+        fillData('@Model.CategoryId');
+        </script>
+    }
+</body>

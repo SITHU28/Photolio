@@ -1,0 +1,42 @@
+﻿@model List<PHOTOLIO.ViewModel.UserVM>
+@{
+    ViewBag.Title = "Photographers";
+}
+
+<!-- Photographers Container -->
+<div class="ST-container ST-padding-64 ST-center" id="frmUser">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="dotted3 os-animation" data-os-animation="bounceInLeft" data-os-animation-delay="1.50s" style="margin-bottom:50px;"></div>
+        <div class="special">
+            <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="1.20s" style="margin-bottom:50px;">Photographers</h2>
+            <div class="dotted4 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="1.50s" style="margin-bottom:50px;"></div>
+        </div>
+    </div>
+
+    <div class="ST-row">
+        <br>
+        @foreach (var item in Model)
+        {
+            <div class="ST-quarter ST-animate-zoomwelcome " style="padding:20px;">
+                @*<img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Photolio" style="width:45%" class="ST-circle ST-hover-opacity ST-card">*@
+                <img src="/GALLERY/@(item.Profile)" style="width:140px; height:140px;" class="ST-circle ST-hover-opacity ST-card" />
+                <div class="saction1">
+                    <p style="padding-top:20px;">@item.Name</p>
+                    <div class="desc">
+                        @*<a href="/Product/GetListByUserId?userId=@item.Id" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>*@
+                        <a href="/User/UserProfile?Id=@item.Id" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE INFO</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="~/wwroot/mine/js/User.js"></script>
+    <script src="~/wwwroot/mine/js/LogIn.js"></script>
+    <script>
+        $("#tblUser").DataTable();
+    </script>
+}          

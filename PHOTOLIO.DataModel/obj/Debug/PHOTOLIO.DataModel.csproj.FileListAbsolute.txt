@@ -1,0 +1,67 @@
+A:\L 6\PHOTOLIO\ACE.DataModel\bin\Debug\PHOTOLIO.DataModel.dll
+A:\L 6\PHOTOLIO\ACE.DataModel\bin\Debug\PHOTOLIO.DataModel.pdb
+A:\L 6\PHOTOLIO\ACE.DataModel\bin\Debug\EntityFramework.dll
+A:\L 6\PHOTOLIO\ACE.DataModel\bin\Debug\EntityFramework.Extended.dll
+A:\L 6\PHOTOLIO\ACE.DataModel\bin\Debug\EntityFramework.SqlServer.dll
+A:\L 6\PHOTOLIO\ACE.DataModel\bin\Debug\EntityFramework.xml
+A:\L 6\PHOTOLIO\ACE.DataModel\bin\Debug\EntityFramework.Extended.xml
+A:\L 6\PHOTOLIO\ACE.DataModel\bin\Debug\EntityFramework.Extended.dll.config
+A:\L 6\PHOTOLIO\ACE.DataModel\bin\Debug\EntityFramework.SqlServer.xml
+A:\L 6\PHOTOLIO\ACE.DataModel\obj\Debug\PHOTOLIO.DataModel.csprojAssemblyReference.cache
+A:\L 6\PHOTOLIO\ACE.DataModel\obj\Debug\PHOTOLIO.DataModel.csproj.CoreCompileInputs.cache
+A:\L 6\PHOTOLIO\ACE.DataModel\obj\Debug\PHOTOLIO.DataModel.csproj.CopyComplete
+A:\L 6\PHOTOLIO\ACE.DataModel\obj\Debug\PHOTOLIO.DataModel.dll
+A:\L 6\PHOTOLIO\ACE.DataModel\obj\Debug\PHOTOLIO.DataModel.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\PHOTOLIO.DataModel.dll
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\PHOTOLIO.DataModel.pdb
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.dll
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.Extended.dll
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.SqlServer.dll
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.xml
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.Extended.xml
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.Extended.dll.config
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.SqlServer.xml
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.csproj.CoreCompileInputs.cache
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.csproj.CopyComplete
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.dll
+A:\L 6\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.pdb
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\PHOTOLIO.DataModel.dll
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\PHOTOLIO.DataModel.pdb
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.dll
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.Extended.dll
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.SqlServer.dll
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.xml
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.Extended.xml
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.Extended.dll.config
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.SqlServer.xml
+A:\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.csprojAssemblyReference.cache
+A:\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.csproj.CoreCompileInputs.cache
+A:\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.csproj.CopyComplete
+A:\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.dll
+A:\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.pdb
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.abstractions.dll
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.core.dll
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.execution.desktop.dll
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.abstractions.xml
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.core.xml
+A:\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.execution.desktop.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\PHOTOLIO.DataModel.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\PHOTOLIO.DataModel.pdb
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.Extended.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.SqlServer.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.abstractions.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.core.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.execution.desktop.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.Extended.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.Extended.dll.config
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\EntityFramework.SqlServer.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.abstractions.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.core.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\bin\Debug\xunit.execution.desktop.xml
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.csprojAssemblyReference.cache
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.csproj.CoreCompileInputs.cache
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.csproj.CopyComplete
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.dll
+F:\BACKUP\PHOTOLIO\PHOTOLIO.DataModel\obj\Debug\PHOTOLIO.DataModel.pdb

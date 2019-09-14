@@ -1,0 +1,376 @@
+﻿@model List<PHOTOLIO.ViewModel.ProductVM>
+@{
+    ViewBag.Title = "Product List";
+}
+@*<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pizza</title>
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700' rel='stylesheet' type='text/css' />
+
+    <!--MOBILE DEVICE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/imgoverlay.css" />
+
+    <!--JS-->
+
+    <script type="text/javascript" src="~/wwwroot/dist/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="~/wwwroot/dist/js/modernizr.js"></script>
+    <script src="~/wwwroot/dist/js/scripts.js"></script>
+    <script src="~/wwwroot/dist/js/waypoints.min.js"></script>
+</head>*@
+<body>
+    <section class="editsection">
+        <div class="container" style="margin-top:100px;">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-success">     
+                       
+
+
+                        <form class="form-horizontal" id="frmProduct">
+                            <div class="box-body">
+                                @{
+                                    var currentUser = (PHOTOLIO.ViewModel.UserVM)Session["CurrentUser"];
+                                }
+                                @if (currentUser == null) //default
+                                {
+                                    <div class="box-header with-border">
+                                        <div class="col-md-6 col-md-offset-5">
+                                            <div class="form-group">
+                                                <p class="form-control-static"><b style="font-weight:bold;">There are no items in this cart.</b></p>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <br />
+                                        <div class="col-md-6 col-md-offset-5">
+                                            <button type="button" class="btn btn-primary" onclick="window.location = '/Product/List';"> Continue</button>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <br />
+
+
+
+                                    <section class="saction4">
+                                        <div class="container" id="offer">
+
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <div class="dotted33 os-animation" data-os-animation="bounceInLeft" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+                                                    <div class="special">
+                                                        <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="0.50s" style="margin-bottom:50px;">Best Of The Month</h2>
+                                                        <div class="dotted44 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="responsive ">
+                                                <div class="gallery ST-card">
+                                                    <a target="_blank" href="img_5terre.jpg">
+                                                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                                                    </a>
+                                                    <div class="desc ST-border">
+                                                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                                                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="responsive ">
+                                                <div class="gallery ST-card">
+                                                    <a target="_blank" href="img_5terre.jpg">
+                                                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                                                    </a>
+                                                    <div class="desc ST-border">
+                                                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                                                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="responsive ">
+                                                <div class="gallery ST-card">
+                                                    <a target="_blank" href="img_5terre.jpg">
+                                                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                                                    </a>
+                                                    <div class="desc ST-border">
+                                                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                                                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="responsive ">
+                                                <div class="gallery ST-card">
+                                                    <a target="_blank" href="img_5terre.jpg">
+                                                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                                                    </a>
+                                                    <div class="desc ST-border">
+                                                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                                                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </section>
+
+
+
+
+                                }
+                                else if (currentUser.PositionId == 1) //admin
+                                {
+
+                                    ViewBag.Title = "Product List (Admin)";
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="mymenu">
+                                            <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="0.50s" style="margin-bottom:20px;">Product List Admin Side</h2>
+                                        </div>
+                                    </div>
+                                    <div class="box-header with-border">
+
+                                        <button type="button" class="btn btn-success" onclick="window.location = '/Product/Entry'" style="margin-bottom:10px;">Add</button>
+                                        <br />
+
+                                    </div>
+
+                                    <table id="tblProduct" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2-info">
+                                        <thead>
+                                            <tr style="background-color:dodgerblue; color:white; font-weight:bold;">
+                                                <th>Photo</th>
+                                                <th>Name</th>
+                                                <th>Ingredient</th>
+                                                <th>Price (Ks)</th>
+                                                <th>Category</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <td>
+                                                        <img src="data:image;base64,@System.Convert.ToBase64String(item.Photo)" width="80" height="80" />
+                                                    </td>
+                                                    <td> @item.Name </td>
+                                                    <td> @item.Ingredient </td>
+                                                    <td> @item.Price </td>
+                                                    <th> @item.CategoryName </th>
+                                                    <th><a href="/Product/Edit?id=@item.Id" class="btn w3-green w3-hover-gray">Edit</a></th>
+                                                    <th><a class="btn w3-red w3-hover-gray" data-toggle="modal" data-target="#divConfirm" onclick="setRemoveData('@item.Id','@item.Version')"> Delete</a></th>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                }
+                                else // Customer
+                                {
+
+                                    <div class="box-header with-border">
+                                        <div class="col-md-6 col-md-offset-5">
+                                            <div class="form-group">
+                                                <p class="ST-text-blue "><b style="font-weight:bold; text-align:center">There are no items in this cart.</b></p>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <br />
+                                        <div class="col-md-6 col-md-offset-5">
+                                            <button type="button" class="btn btn-primary" onclick="window.location = '/Product/List';">Continue Shopping</button>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <section class="saction4">
+                                        <div class="container" id="offer">
+
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <div class="dotted33 os-animation" data-os-animation="bounceInLeft" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+                                                    <div class="special">
+                                                        <h2 class="os-animation " data-os-animation="bounceInDown" data-os-animation-delay="0.50s" style="margin-bottom:50px;">Best Of The Month</h2>
+                                                        <div class="dotted44 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="responsive ">
+                                                <div class="gallery ST-card">
+                                                    <a target="_blank" href="img_5terre.jpg">
+                                                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                                                    </a>
+                                                    <div class="desc ST-border">
+                                                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                                                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="responsive ">
+                                                <div class="gallery ST-card">
+                                                    <a target="_blank" href="img_5terre.jpg">
+                                                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                                                    </a>
+                                                    <div class="desc ST-border">
+                                                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                                                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="responsive ">
+                                                <div class="gallery ST-card">
+                                                    <a target="_blank" href="img_5terre.jpg">
+                                                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                                                    </a>
+                                                    <div class="desc ST-border">
+                                                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                                                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="responsive ">
+                                                <div class="gallery ST-card">
+                                                    <a target="_blank" href="img_5terre.jpg">
+                                                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" alt="Image" width="600" height="400">
+                                                    </a>
+                                                    <div class="desc ST-border">
+                                                        <p class="ST-left"><b>Photo By <span style="color:red">---</span></b></p>
+                                                        <a href="#" class="ST-button ST-block ST-red ST-round"><i class="fa fa-info-circle"></i>  MORE DETAIL</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </section>
+
+
+
+                                }
+                            </div>
+
+                        </form> 
+
+                        @*<div class="box-header with-border">
+                            <div class="col-md-6 col-md-offset-5">
+                                <div class="form-group">
+                                    <p class="form-control-static"><b style="font-weight:bold;">There are no items in this cart.</b></p>                                    
+                                </div>     
+                            </div>
+                            <br />
+                            <br />
+                            <div class="col-md-6 col-md-offset-5">                                
+                                <button type="button" class="btn btn-primary" onclick="window.location = '/Product/List';">Continue Shopping</button>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+
+                        <section class="saction4">
+                            <div class="container" id="offer">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12">
+                                        <div class="dotted33 os-animation" data-os-animation="bounceInLeft" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+                                        <div class="special">
+                                            <h2 class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay="0.50s" style="margin-bottom:50px;">Top Sellers Food From ACE</h2>
+                                            <div class="dotted44 os-animation" data-os-animation="bounceInRight" data-os-animation-delay="1s" style="margin-bottom:50px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 col-sm-8 col-xs-8">
+                                    <figure class="food os-animation" data-os-animation="fadeInDown" data-os-animation-delay="0.50s">
+                                        <div class="imgocontainer">
+                                            <div class="product">
+                                                <img src="~/wwwroot/dist/images/Pizza2.jpg" class="imageoverlay" />
+                                                <h4 style="text-align:center">Pizza</h4>
+                                            </div>
+                                        </div>
+                                        <div class="order">
+                                            <a href="/Product/GetListByCategoryId?categoryId=1" class="orderbtn w3-hover-gray w3-blue ">See More</a>
+
+                                        </div>
+                                    </figure>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 col-sm-8 col-xs-8">
+                                    <figure class="food os-animation" data-os-animation="fadeInDown" data-os-animation-delay="0.50s">
+                                        <div class="imgocontainer">
+                                            <div class="product">
+                                                <img src="~/wwwroot/dist/images/BurgerAll.jpg" class="imageoverlay" />
+                                                <h4 style="text-align:center">Burger</h4>
+                                            </div>
+                                        </div>
+                                        <div class="order">
+                                            <a href="/Product/GetListByCategoryId?categoryId=3" class="orderbtn w3-hover-gray w3-blue ">See More</a>
+
+                                        </div>
+                                    </figure>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 col-sm-8 col-xs-8">
+                                    <figure class="food os-animation" data-os-animation="fadeInDown" data-os-animation-delay="0.50s">
+                                        <div class="imgocontainer">
+                                            <div class="product">
+                                                <img src="~/wwwroot/dist/images/ChickenAll.jpg" class="imageoverlay" />
+                                                <h4 style="text-align:center">Fried Chicken</h4>
+                                            </div>
+                                        </div>
+                                        <div class="order">
+                                            <a href="/Product/GetListByCategoryId?categoryId=2" class="orderbtn w3-hover-gray w3-blue ">See More</a>
+
+                                        </div>
+                                    </figure>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 col-sm-8 col-xs-8">
+                                    <figure class="food os-animation" data-os-animation="fadeInDown" data-os-animation-delay="0.50s">
+                                        <div class="imgocontainer">
+                                            <div class="product">
+                                                <img src="~/wwwroot/dist/images/FreisAll.jpg" class="imageoverlay" />
+                                                <h4 style="text-align:center">Fries</h4>
+                                            </div>
+                                        </div>
+                                        <div class="order">
+                                            <a href="/Product/GetListByCategoryId?categoryId=5" class="orderbtn w3-hover-gray w3-blue ">See More</a>
+
+                                        </div>
+                                    </figure>
+                                </div>
+
+                            </div>
+                        </section>*@
+
+
+
+                    </div>
+                </div>
+            </div>          
+
+        </div>
+    </section>   
+</body>
+@section scripts{
+    <script src="~/wwwroot/mine/js/Product.js"></script>
+    <script src="~/wwwroot/mine/js/LogIn.js"></script>
+    <script>
+    $("#tblProduct").DataTable();
+    </script>
+}
+
+
+
