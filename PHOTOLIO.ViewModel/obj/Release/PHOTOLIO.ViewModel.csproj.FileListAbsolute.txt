@@ -1,0 +1,6 @@
+A:\PHOTOLIO\PHOTOLIO.ViewModel\bin\Release\PHOTOLIO.ViewModel.dll
+A:\PHOTOLIO\PHOTOLIO.ViewModel\bin\Release\PHOTOLIO.ViewModel.pdb
+A:\PHOTOLIO\PHOTOLIO.ViewModel\obj\Release\PHOTOLIO.ViewModel.csprojAssemblyReference.cache
+A:\PHOTOLIO\PHOTOLIO.ViewModel\obj\Release\PHOTOLIO.ViewModel.csproj.CoreCompileInputs.cache
+A:\PHOTOLIO\PHOTOLIO.ViewModel\obj\Release\PHOTOLIO.ViewModel.dll
+A:\PHOTOLIO\PHOTOLIO.ViewModel\obj\Release\PHOTOLIO.ViewModel.pdb

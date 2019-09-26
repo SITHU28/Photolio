@@ -65,6 +65,19 @@ namespace PHOTOLIO.Service
             dmEntity.CreatedUserId = vmEntity.CreatedUserId;
             dmEntity.UpdatedUserId = vmEntity.UpdatedUserId;
 
+            dmEntity.Photoshop = vmEntity.Photoshop;
+            dmEntity.Photography = vmEntity.Photography;
+            dmEntity.Illustrator = vmEntity.Illustrator;
+            dmEntity.Media = vmEntity.Media;
+            dmEntity.PremierePro = vmEntity.PremierePro;
+            dmEntity.Lightroom = vmEntity.Lightroom;
+            dmEntity.Burmese = vmEntity.Burmese;
+            dmEntity.English = vmEntity.English;
+            dmEntity.Chinese = vmEntity.Chinese;
+            dmEntity.PackageTitle = vmEntity.PackageTitle;
+            dmEntity.AboutPackage = vmEntity.AboutPackage;
+            dmEntity.PackagePrice = vmEntity.PackagePrice;
+
             long time = DateTime.Now.Ticks;
             dmEntity.Version = time;
             dmEntity.CreatedDate = time;
@@ -96,26 +109,23 @@ namespace PHOTOLIO.Service
                     FullAddress = s.FullAddress,
                     PhoneNo = s.PhoneNo,
                     Email = s.Email,
-                }).ToList();
 
-                //return context.UserDMs.GroupJoin(context.ProductDMs,
-                //    o => o.ProductId,
-                //    p => p.Id,
-                //    (o, p) => new { o, p }).Where(w => w.o.IsDelete == false && w.o.ProductId == productId).Select(s => new UserVM
-                //{
-                //    Id = s.o.Id,
-                //    Version = s.o.Version,
-                //    Profile = s.o.Profile,
-                //    Name = s.o.Name,
-                //    Password = s.o.Password,
-                //    UserBio = s.o.UserBio,
-                //    FullAddress = s.o.FullAddress,
-                //    PhoneNo = s.o.PhoneNo,
-                //    Email = s.o.Email,
-                //}).ToList();
+                    Photoshop=s.Photoshop,
+                    Photography=s.Photography,
+                    Illustrator=s.Illustrator,
+                    Media=s.Media,
+                    PremierePro=s.PremierePro,
+                    Lightroom=s.Lightroom,
+                    Burmese=s.Burmese,
+                    English=s.English,
+                    Chinese=s.Chinese,
+                    PackageTitle=s.PackageTitle,
+                    AboutPackage=s.AboutPackage,
+                    PackagePrice=s.PackagePrice,
+                }).ToList();
             }
         }
-
+       
         public UserVM SelectById(int id)
         {
             using (PHOTOLIODBContext context = new PHOTOLIODBContext())
@@ -131,7 +141,34 @@ namespace PHOTOLIO.Service
                     FullAddress = s.FullAddress,
                     PhoneNo = s.PhoneNo,
                     Email = s.Email,
+
+                    Photoshop = s.Photoshop,
+                    Photography = s.Photography,
+                    Illustrator = s.Illustrator,
+                    Media = s.Media,
+                    PremierePro = s.PremierePro,
+                    Lightroom = s.Lightroom,
+                    Burmese = s.Burmese,
+                    English = s.English,
+                    Chinese = s.Chinese,
+                    PackageTitle = s.PackageTitle,
+                    AboutPackage = s.AboutPackage,
+                    PackagePrice = s.PackagePrice,
                 }).FirstOrDefault();
+            }
+        }
+
+        public List<ProductVM> GetProductsByUser(int id)
+        {
+            using (PHOTOLIODBContext context = new PHOTOLIODBContext())
+            {
+                var products = context.ProductDMs.Where(x => x.UserId == id).Select(x => new ProductVM
+                {
+                    Photo = x.Photo,
+                     Description = x.Description
+                }).ToList();
+
+                return products;
             }
         }
 
@@ -166,6 +203,19 @@ namespace PHOTOLIO.Service
                         PhoneNo = inputVM.PhoneNo,
                         Email = inputVM.Email,
 
+                        Photoshop = inputVM.Photoshop,
+                        Photography = inputVM.Photography,
+                        Illustrator = inputVM.Illustrator,
+                        Media = inputVM.Media,
+                        PremierePro = inputVM.PremierePro,
+                        Lightroom = inputVM.Lightroom,
+                        Burmese = inputVM.Burmese,
+                        English = inputVM.English,
+                        Chinese = inputVM.Chinese,
+                        PackageTitle = inputVM.PackageTitle,
+                        AboutPackage = inputVM.AboutPackage,
+                        PackagePrice = inputVM.PackagePrice,
+
                         Version = time,
                         UpdatedUserId = inputVM.UpdatedUserId,
                         UpdatedDate = time,
@@ -189,7 +239,78 @@ namespace PHOTOLIO.Service
                     });
             }
         }
+        //public List<ProductVM> SelectListByUserId(int UserID)
+        //{
+        //    using (PHOTOLIODBContext context = new PHOTOLIODBContext())
+        //    {
+        //        return context.ProductDMs
+        //            .GroupJoin(context.UserDMs,
+        //            u => u.UserId,
+        //            p => p.Id,
+        //            (u, p) => new { u, p })
+        //            .Where(w => w.u.IsDelete == false && w.u.Id == UserID).Select(s => new ProductVM
+        //            {
+        //                Id = s.u.Id,
+        //                Photo = s.u.Photo,
+        //                Name = s.u.Name,
+        //            })
+        //        .ToList();
+        //    }
+        //}
 
+        public int Update(ProductVM inputVM)
+        {
+
+            var file = inputVM.ImageFile;
+            long time = DateTime.Now.Ticks;
+
+            //byte[] imageByte = null;
+            //BinaryReader reader = new BinaryReader(file.InputStream);
+            //imageByte = reader.ReadBytes(file.ContentLength);
+
+            string filename = string.Empty;
+            if (file != null && file.ContentLength > 0)
+            {
+                filename = Path.GetFileName(file.FileName);
+                string imgpath = Path.Combine(System.Web.Hosting.HostingEnvironment.MapPath("/GALLERY/"), filename);
+                file.SaveAs(imgpath);
+            }
+
+            using (PHOTOLIODBContext context = new PHOTOLIODBContext())
+            {
+                return context.ProductDMs
+                    .Where(w => w.Id == inputVM.Id && w.Version == inputVM.Version)
+                    .Update(s => new ProductDM
+                    {
+                        Photo = filename,
+                        UserId = inputVM.UserId,
+                        Name = inputVM.Name,
+                        Description = inputVM.Description,
+                        Price = inputVM.Price,
+                        CategoryId = inputVM.CategoryId,
+                        UpdatedUserId = inputVM.UpdatedUserId,
+                        Version = time,
+                        UpdatedDate = time,
+                    });
+            }
+        }
+
+        public int Delete(ProductVM inputVM)
+        {
+            long time = DateTime.Now.Ticks;
+
+            using (PHOTOLIODBContext context = new PHOTOLIODBContext())
+            {
+                return context.ProductDMs
+                    .Where(w => w.Id == inputVM.Id && w.Version == inputVM.Version)
+                    .Update(s => new ProductDM
+                    {
+                        IsDelete = true,
+                        Version = time,
+                        UpdatedDate = time,
+                    });
+            }
+        }
 
     }
 }

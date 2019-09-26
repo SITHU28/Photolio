@@ -1,0 +1,304 @@
+﻿@model List<PHOTOLIO.ViewModel.ProductVM>
+@{
+    ViewBag.Title = "Food (Home)";
+}
+
+<!doctype html>
+
+<head>
+    <title>@ViewBag.Title </title>
+    <meta charset="utf-8">
+
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700' rel='stylesheet' type='text/css' />
+
+    <!--MOBILE DEVICE-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <!--CSS-->
+
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/responsive.css" />
+
+
+
+
+    <style type="text/css">
+        .label {
+            font-size: 10pt;
+            font-weight: bold;
+            font-family: Arial;
+        }
+
+        .contents {
+            border: 1px dotted black;
+            padding: 5px;
+            width: 300px;
+        }
+
+        .name {
+            color: #18B5F0;
+        }
+
+        .left {
+            float: left;
+            width: 50px;
+            height: 50px;
+        }
+
+        .right {
+            margin-left: 60px;
+            line-height: 50px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0px;
+            height: 3px;
+            background-color: #666;
+            color: #eee;
+            width: 100%;
+        }
+    </style>
+
+
+
+
+
+    <!--JS-->
+
+    <script type="text/javascript" src="~/wwwroot/dist/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="~/wwwroot/dist/js/modernizr.js"></script>
+    <script src="~/wwwroot/dist/js/scripts.js"></script>
+    <script src="~/wwwroot/dist/js/waypoints.min.js"></script>
+    <script src="~/wwwroot/mine/js/LogIn.js"></script>
+
+
+</head>
+
+
+
+<body>
+    <div class="container-fluid1">
+        <div class="row">
+            <div class="col-md-12">
+                 @*form start*@ 
+                <form id="frmProducts">
+                    <div class="box box-success">
+                        <div class="box-header with-border">
+
+                            <div class="box-header with-border">
+                                <button type="button" class="btn w3-blue" onclick="window.location = '/Product/List';">Continue Shopping</button>
+                                <br />
+                                <br />
+                            </div>                            
+
+                        </div>
+                        <div class="box-body table-responsive">
+                            @{
+                                var currentUser = (PHOTOLIO.ViewModel.UserVM)Session["CurrentUser"];
+                            }
+                            @if (currentUser == null)
+                            {
+                                <table id="tblAddToCart" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2-info">
+                                    <thead>
+                                        <tr style="background-color:dodgerblue; color:white">
+                                            <th>Name</th>
+                                            <th>Ingredient</th>
+                                            <th>Price</th>
+                                            @*<th>Category</th>*@
+                                            <th>Confirm Order</th>
+                                            <th>Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var x in Model)
+                                        {
+                                            <tr>
+
+                                                <td>@x.Name</td>
+                                                <td>@x.Ingredient</td>
+                                                <td>@x.Price</td>
+                                                @*<td>@x.CategoryName</td>*@
+                                              
+                                                <td><a href="#" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-bookmark"></i> Order </a></td>
+
+
+                                                <td><a href="#" class="ST-button ST-red ST-hover-gray" onclick="window.location = '/AddToCart/Remove?Id=@x.Id';">Remove <i class="fa fa-shopping-cart"></i></a></td>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            }
+                            else
+                            {
+                                <table id="tblAddToCart" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2-info">
+                                    <thead>
+                                        <tr style="background-color:dodgerblue; color:white">
+                                            <th>Name</th>
+                                            <th>Ingredient</th>
+                                            <th>Price</th>
+                                            @*<th>Category</th>*@
+                                            <th>Confirm Order</th>
+                                            <th>Remove</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var x in Model)
+                                        {
+                                            <tr>
+
+                                                <td>@x.Name</td>
+                                                <td>@x.Ingredient</td>
+                                                <td>@x.Price</td>
+                                                @*<td>@x.CategoryName </td>*@
+
+
+                                                <th><a href="#" class="btn btn-primary" onclick="window.location = '/Order/Entry?productId=@x.Id';"><i class="fa fa-bookmark"></i> Order </a></th>
+
+                                                <th><a href="#" class="btn w3-red w3-hover-gray" onclick="window.location = '/AddToCart/Remove?Id=@x.Id';">Remove <i class="fa fa-shopping-cart"></i></a></th>
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            }
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<section class="editsection">
+    <div class="container" style="margin-top:100px;">
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-success">
+                    <form class="form-horizontal" id="frmProducts">
+                        <div class="box-header with-border">                          
+                                <button type="button" class="btn btn-primary" onclick="window.location = '/Product/List';">Continue Shopping</button>
+                                <br />
+                                <br />                          
+                        </div>
+                        <div class="box-body table-responsive">
+
+                            @{
+                                var currentUser = (ACE.ViewModel.UserVM)Session["CurrentUser"];
+                             }
+                                @if (currentUser == null)
+                                {
+                                    <table id="tblAddToCart" class="table table-hover" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Ingredient</th>
+                                                <th>Price</th>
+                                                <th>Category</th>
+                                                <th>Confirm Order</th>
+                                                <th>Remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var x in Model)
+                                            {
+                                                <tr>
+
+                                                    <td>@x.Name</td>
+                                                    <td>@x.Ingredient</td>
+                                                    <td>@x.Price</td>
+                                                    <td>@x.CategoryName </td>                                                   
+                                                    <td><a href="#" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-bookmark"></i> Order </a></td>                                 
+                                                    
+                                                    <td><a href="#" class="orderbtn w3-blue-gray w3-hover-gray" onclick="window.location = '/AddToCart/Remove?Id=@x.Id';">Remove <i class="fa fa-shopping-cart"></i></a></td>                                                   
+
+                                                </tr>
+                                            }
+
+                                    </table>
+                                }
+                                else
+                                {
+                                    <table id="tblAddToCart" class="table table-hover" width="100%">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Name</th>
+                                                <th>Ingredient</th>
+                                                <th>Price</th>
+                                                <th>Category</th>
+                                                <th>Confirm Order</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var x in Model)
+                                            {
+                                                <tr>
+
+                                                    <td>@x.Name</td>
+                                                    <td>@x.Ingredient</td>
+                                                    <td>@x.Price</td>
+                                                    <td>@x.CategoryName </td>
+
+                                                    <th><a href="#" class="btn btn-primary" onclick="window.location = '/Order/Entry?productId=@x.Id';"><i class="fa fa-bookmark"></i> Order </a></th>
+                                                    <td><a href="#" class="orderbtn w3-blue-gray w3-hover-gray" onclick="window.location = '/AddToCart/Remove?Id=@x.Id';">Remove <i class="fa fa-shopping-cart"></i></a></td>
+                                                   
+                                                </tr>
+                                            }
+
+                                    </table>
+                                }
+
+
+
+                          
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>*@
+
+@section scripts{
+   
+    <script src="~/wwwroot/mine/js/Order.js"></script>
+    <script src="~/wwwroot/mine/js/LogIn.js"></script>   
+    <script>
+        $("#tblAddToCart").DataTable();
+    </script>    
+}
+
+
+
+

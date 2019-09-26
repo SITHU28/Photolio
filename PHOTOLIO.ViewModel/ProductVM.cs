@@ -25,6 +25,6 @@ namespace PHOTOLIO.ViewModel
         public long UpdatedDate { get; set; }
         public HttpPostedFileWrapper ImageFile { get; set; }
         public List<CategoryVM> CategoryVMs { get; set; }
-       
+        
     }
 }

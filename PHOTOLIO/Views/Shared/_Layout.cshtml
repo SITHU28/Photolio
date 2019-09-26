@@ -4,7 +4,7 @@
 <head>
     <title>@ViewBag.title -PHOTOLIO</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="~/wwwroot/dist/images/PhotolioCircleicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/wwwroot/dist/images/PhotolioCircleicon.ico" class="ST-circle"/>
 
     <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700' rel='stylesheet' type='text/css' />
@@ -42,10 +42,6 @@
     <script src="~/wwwroot/dist/js/scripts.js"></script>
     <script src="~/wwwroot/dist/js/windowscroll.js"></script>
     <script src="~/wwwroot/mine/js/User.js"></script>
-    @*<script src="~/wwwroot/mine/js/LogIn.js"></script>*@
-    @*<script src="~/wwwroot/mine/js/Position.js"></script>
-    <script src="~/wwwroot/mine/js/Category.js"></script>
-    <script src="~/wwwroot/mine/js/map.js"></script>*@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN8gOzTMRcSgcN3cscIN1zNNQAWGk9bu0&callback=myMap"></script>
 
@@ -86,13 +82,13 @@
                 <a href="/User/Photographers" class="ST-bar-item ST-button ST-hide-small ST-left"><i class="fa fa-camera"></i> PHOTOGRAPHERS</a>
                 <a href="/Map/Locations" class="ST-bar-item ST-button ST-hide-small ST-left"><i class="fa fa-map-o"></i> LOCATIONS</a>
                 <div class="ST-bar-item ST-navlogofont ST-hide-small ST-right " style="margin-right:25px;margin-top:3px;margin-left:25px;">
-                    <img src="~/wwwroot/dist/images/PhotolioLogo CircleWhite.ico" class="ST-card ST-circle" style="max-height:25px;max-width:25px;" />
+                    <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" class="ST-card ST-circle" style="max-height:25px;max-width:25px;" onclick="onClick(this)" />
                 </div>
                 @*<a href="@Url.Action("Myorder", "AddToCart")" class="ST-bar-item ST-button ST-hide-small ST-right ST-hover-red">
                         <i class="fa fa-shopping-cart"></i> Your Cart <span class="badge">@Session["count"]</span>
                     </a>*@
 
- <!-------------------------------------------------------------------------------------------------------------------------------------->
+                <!-------------------------------------------------------------------------------------------------------------------------------------->
 
                 @if (currentUser == null) //default
                 {
@@ -107,18 +103,18 @@
                         <button class=" ST-button" title="ADMIN" style="min-width:150px;">
                             @{
                                 @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" class="user-image ST-card" alt="User Image">*@
-                                <img src="/GALLERY/@currentUser.Profile" class="user-image ST-card" alt="User Image" />
+                                <img src="/UserProfiles/@(currentUser.Profile)" class="ST-circle user-image ST-card" alt="User Image" />
                                 @currentUser.Name
                             }
                         </button>
                         <div class=" ST-dropdown-content ST-bar-block ST-card"></div>
-                        <div class="ST-dropdown-content ST-bar-block ST-card" style="padding:10px; min-width:220px;">
+                        <div class="ST-dropdown-content ST-bar-block ST-card" style="padding:5px; min-width:220px;">
                             <!-- User image -->
 
                             <div style="padding:5px;">
                                 <center>
                                     @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" style="width:50%; height:90px; padding:5px;" class="ST-circle ST-card-2" alt="Profile" />*@
-                                    <img src="/UserProfiles/RetrieveImage/@currentUser.Id" style="width:120px; height:120px; padding:5px;" class="ST-circle ST-card-2" alt="Profile" />
+                                    <img src="/UserProfiles/@(currentUser.Profile)" style="width:120px; height:120px; padding:5px;" class="ST-circle ST-card-2" alt="Profile" />
                                 </center>
                             </div>
                             <div style="padding:2px;">
@@ -152,7 +148,7 @@
 
                             @{
                                 @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" class="user-image ST-card" alt="User Image">*@
-                            <img src="/GALLERY/@(currentUser.Profile)" class="user-image ST-card" alt="Profile" />
+                                <img src="/UserProfiles/@(currentUser.Profile)" class="ST-circle user-image ST-card" alt="Profile" />
                                 @currentUser.Name
                             }
                         </button>
@@ -163,7 +159,7 @@
                                 <div style="padding:10px;">
                                     <center>
                                         @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" style="width:120px; height:120px; padding:5px;" class="ST-circle ST-card-2" alt="Profile" />*@
-                                        <img src="/GALLERY/@(currentUser.Profile)" style="width:120px; height:120px; padding:5px;" class="ST-circle ST-card-2" alt="Profile"/>
+                                        <img src="/UserProfiles/@(currentUser.Profile)" style="width:120px; height:120px; padding:5px;" class="ST-circle ST-card-2" alt="Profile" />
                                     </center>
                                 </div>
                                 <br />
@@ -178,7 +174,8 @@
                             </div>
                             <div style="padding-top:10px;">
                                 <a href="/Product/Entry" class="ST-bar-item ST-button  ST-border"><i class="fa fa-camera"></i> <span>UPLOAD PHOTO</span></a>
-                                <a href="/Order/MyOrderList?userId=@currentUser.Id" class="ST-bar-item ST-button  ST-border"><i class="fa fa-photo"></i> <span>MY GALLERY</span></a>
+                                @*<a href="#" class="ST-bar-item ST-button  ST-border"><i class="fa fa-photo"></i> <span>MY GALLERY</span></a>*@
+                                @*<a href="/Order/MyOrderList?userId=@currentUser.Id" class="ST-bar-item ST-button  ST-border"><i class="fa fa-photo"></i> <span>MY GALLERY</span></a>*@
 
                             </div>
                             <div style="padding-top:10px;">
@@ -207,14 +204,14 @@
                 }
                 else
                 {
-            <a href="/User/Edit?Id=@currentUser.Id" class="ST-bar-item ST-button ST-padding-large">
-                @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" class="user-image ST-card" alt="User Image">*@
-                <img src="~/UserProfiles/RetrieveImage/@currentUser.Id" class="user-image ST-card" alt="User Image" />
-                @currentUser.Name
-            </a>
+                    <a href="/User/Edit?Id=@currentUser.Id" class="ST-bar-item ST-button ST-padding-large">
+                        @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" class="user-image ST-card" alt="User Image">*@
+                        <img src="~/UserProfiles/RetrieveImage/@currentUser.Id" class="user-image ST-card" alt="User Image" />
+                        @currentUser.Name
+                    </a>
                 }
                 <a href="/Product/List" class="ST-bar-item ST-button ST-padding-large"><i class="fa fa-image"></i> GALLERY</a>
-                <a href="/User/UserProfiles" class="ST-bar-item ST-button ST-padding-large"><i class="fa fa-camera"></i> PHOTOGRAPHERS</a>
+                <a href="/User/Photographers" class="ST-bar-item ST-button ST-padding-large"><i class="fa fa-camera"></i> PHOTOGRAPHERS</a>
                 <a href="/Map/Locations" class="ST-bar-item ST-button ST-padding-large"><i class="fa fa-map-o"></i> LOCATIONS</a>
             </div>
 
@@ -234,7 +231,7 @@
                         <h3>Notes :</h3>
                     </div>
                     <div class="sitelink">
-                        <span>&#10152;</span><a href="/Home/Team" class="ST-bar-item ST-button ST-hide-small "><i class="fa fa-user"></i> ABOUT US</a>
+                        <span>&#10152;</span><a href="/Home/Team" class="ST-button ST-round  "><i class="fa fa-user"></i> ABOUT US</a>
 
                     </div>
                 </div>
@@ -245,10 +242,10 @@
                     </div>
                     <div class="social">
                         <p>
-                            <a href="https://www.facebook.com/photolio.mm/" class="fa fa-facebook "></a>&nbsp;&nbsp;
-                            <a href="https://twitter.com/PHOTOLIO1" class="fa fa-twitter"></a>&nbsp;&nbsp;
-                            <a href="https://www.instagram.com/photolio.mm/" class="fa fa-instagram "></a>
-                            <a href="https://www.linkedin.com/in/si-thu-htet-aung-a42879137/" class="fa fa-linkedin"></a>
+                            <a href="https://www.facebook.com/photolio.mm/" class="fa fa-facebook " target="_blank"></a>&nbsp;&nbsp;
+                            <a href="https://twitter.com/PHOTOLIO1" class="fa fa-twitter" target="_blank"></a>&nbsp;&nbsp;
+                            <a href="https://www.instagram.com/photolio.mm/" class="fa fa-instagram " target="_blank"></a>
+                            <a href="https://www.linkedin.com/in/si-thu-htet-aung-a42879137/" class="fa fa-linkedin" target="_blank"></a>
                         </p>
                     </div>
 
@@ -258,7 +255,7 @@
                         <h3>Contact Us</h3>
                     </div>
                     <div class="sitelink">
-                        <span>&#10152;</span><a href="/ContactUs/Entry" class="ST-bar-item ST-button ST-hide-small "><i class="fa fa-envelope"></i> CONTACT US</a>
+                        <span>&#10152;</span><a href="/ContactUs/Entry"  class="ST-button ST-round  "><i class="fa fa-envelope"></i> CONTACT US</a>
 
                     </div>
                 </div>
@@ -270,7 +267,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="email"><b style="color:white">&copy;</b> All right reserved 2019 Powered By <a href="https://www.facebook.com/SiThuHtetAung.AJ"><b style="color:red">Si Thu Htet Aung</b></a> </div>
+                    <div class="email"><b style="color:white">&copy;</b> All right reserved 2019 Powered By <a href="https://www.facebook.com/SiThuHtetAung.AJ" target="_blank"><b style="color:red">Si Thu Htet Aung</b></a> </div>
                 </div>
             </div>
         </div>
@@ -297,7 +294,8 @@
                                 <i class="fa fa-google fa-fw">
                                 </i> Login with Google
                             </a>*@
-                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" class="ST-circle" style="width:100%; height:30%" />
+                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" class="ST-circle" style="width:85%; height:15%" />
+                        <button name="My" class="loginbtn ST-round ST-hover-gray" type="button" style="display:inline-block" onclick="document.getElementById('id02').style.display='block',document.getElementById('id01').style.display='none'">Create Member Account</button>
                     </div>
 
                     <div class="col">
@@ -305,24 +303,17 @@
                             <p>Or sign in manually:</p>
                         </div>
 
-                        @*<label><b>Name</b></label>*@
+                     
                         <input class="log" type="email" placeholder="Email" name="LoginEmail" id="LoginEmail" required />
                         <p id="textcaplock">WARNING! Caps lock is ON.</p>
 
-                        @*<label><b>Password</b></label>*@
                         <input class="log" type="password" placeholder="Enter Password" name="LoginPassword" id="LoginPassword" required />
-                        <input type="checkbox" onclick="showpasswordFunction()" class="log"> Show Password
-                        <button class="loginbtn ST-round ST-hover-gray" type="button" style="display:inline-block" onclick="LogIn()">Login</button>
-                    </div>
-                </div>
-                <div class="row ">
-                    <div class="col">
-                        <button name="My" class="loginbtn ST-round ST-hover-gray" type="button" style="display:inline-block" onclick="document.getElementById('id02').style.display='block',document.getElementById('id01').style.display='none'">Create Member Account</button>
-                    </div>
-                    <div class="col">
+                        <input type="checkbox" onclick="showpasswordFunction()"> Show Password
+                        <button class="loginbtn ST-round ST-hover-gray ST-green" type="button" style="display:inline-block" onclick="LogIn()">Login</button>
                         <button name="My" type="button" onclick="document.getElementById('id01').style.display='none'" class="loginbtn ST-round ST-red ST-hover-gray">Cancel</button>
                     </div>
                 </div>
+                
             </div>
 
         </form>
@@ -331,43 +322,7 @@
     @*-------------------------------------------------Sign up------------------------------------------------------*@
     <div id="id02" class="mymodal ST-card">
 
-        @*<form class="mymodal-content animate" id="frmUser">
-
-                <div class="form-group">
-
-                    <div class="imgcontainer">
-                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                        <img id="ProfilePrev" src="~/wwwroot/dist/images/profile.png" alt="User" style="width:100px;height:100px; max-width:30%; max-height:30%" class="ST-card ST-circle" /><br />
-                    </div>
-                    <input style="float:left; margin-top:10px;" type="file" id="selProfile" name="selProfile" accept="image/*" onchange="ShowPreview(this)" required>
-
-                </div>
-
-                <div class="containerlog">
-
-                    <input class="log" type="text" placeholder="User Name" name="txtUserName" id="txtUserName" onkeypress="enter(event);" required><br />
-
-                    <input class="log" type="text" placeholder="Email" name="txtEmail" id="txtEmail" onkeypress="enter(event);" required><br />
-
-                    <input class="log" type="password" placeholder="Password" name="txtUserPassword" id="txtUserPassword" onkeypress="enter(event);" required><br />
-
-                    <input class="log" type="password" placeholder="Re-Password" name="txtRepPassword" id="txtRepPassword" onkeypress="enter(event);" required><br />
-
-                    <input class="log" type="text" placeholder="Your Bio" name="txtBIO" id="txtBIO" onkeypress="enter(event);" required><br />
-
-                    <input class="log" type="text" placeholder="Address" name="txtFullAddress" id="txtFullAddress" onkeypress="enter(event);" required><br />
-
-                    <input class="log" type="text" placeholder="Phone No" name="txtPhoneNo" id="txtPhoneNo" onkeypress="enter(event);" required><br />
-
-
-                    <div class="clearfix">
-                        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="ST-button ST-round ST-red ST-hover-gray">Cancel</button>
-                        <button type="button" class="ST-button ST-round ST-hover-gray ST-green ST-right" onclick="saveuser()">Sign Up</button>
-                    </div>
-                </div>
-            </form>*@
-
-
+       
         <form id="frmUser" class="frmUser ">
             <span onclick="document.getElementById('id02').style.display='none'" class="close" style="margin-top:50px; color:white;" title="Close Modal">&times;</span>
             <!-- One "tab" for each step in the form: -->
@@ -461,6 +416,12 @@
             <!-- /.modal-content -->
         </div>
         <!-- /.modal-dialog -->
+    </div>
+    <div id="modal010" class="ST-modal" onclick="this.style.display='none'">
+        <span class="ST-white ST-button ST-round ST-hover-red ST-xlarge ST-display-topright">&times;</span>
+        <div class="ST-modal-content ST-animate-zoomimg ST-round">
+            <img id="img01" style="width:60%">
+        </div>
     </div>
 
     <script src="~/wwwroot/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
@@ -587,7 +548,12 @@
             realfileBtn.click();
         });
     </script>
-
+    <script>
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal010").style.display = "block";
+        }
+    </script>
     <script src="~/wwwroot/mine/js/User.js"></script>
 </body>
 </html>

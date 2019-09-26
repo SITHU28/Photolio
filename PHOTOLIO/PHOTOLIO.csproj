@@ -163,6 +163,7 @@
     <Content Include="wwwroot\dist\images\mak.png" />
     <Content Include="wwwroot\dist\images\PhotolioCircleicon.ico" />
     <Content Include="wwwroot\dist\images\PhotolioLogo Circle.jpg" />
+    <Content Include="wwwroot\dist\images\PhotolioLogo Circle.png" />
     <Content Include="wwwroot\dist\images\PhotolioLogo CircleWhite.ico" />
     <Content Include="wwwroot\dist\images\plan.png" />
     <Content Include="wwwroot\dist\images\Postersemple1.jpg" />
@@ -514,6 +515,7 @@
     <Content Include="Views\User\Photographers.cshtml" />
     <Content Include="Views\User\UserProfile.cshtml" />
     <Content Include="Views\Map\Locations.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

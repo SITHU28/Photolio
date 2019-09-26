@@ -1,0 +1,561 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.title -PHOTOLIO</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/wwwroot/dist/images/PhotolioCircleicon.ico" class="ST-circle"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700' rel='stylesheet' type='text/css' />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="~/wwwroot/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/wwwroot/dist/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/wwwroot/dist/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/wwwroot/dist/css/AdminLTE.min.css">
+
+
+    @RenderSection("styles", required: false)
+
+
+    <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700' rel='stylesheet' type='text/css' />
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/style.css" />
+    <link href="~/wwwroot/dist/css/Styleforfontawesome.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" type="text/css" href="~/wwwroot/dist/css/SocielButtoms.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--JS-->
+
+    <script type="text/javascript" src="~/wwwroot/dist/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="~/wwwroot/dist/js/modernizr.js"></script>
+    <script src="~/wwwroot/dist/js/waypoints.min.js"></script>
+    <script src="~/wwwroot/dist/js/scripts.js"></script>
+    <script src="~/wwwroot/dist/js/windowscroll.js"></script>
+    <script src="~/wwwroot/mine/js/User.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA43tGAY54I92IAaJ3ehIWWWR7310-h7Is&callback=myMap"></script>
+
+
+</head>
+
+<body>
+
+    <button onclick="mytopFunction()" id="myBtn" title="Go to top" class="ST-animate-bottom"><i class="fa fa-arrow-up ST-margin-right"></i>Top</button>
+
+    <!-- Paste this code after body tag (Loading)-->
+    <div class="se-pre-con"></div>
+    <!-- Ends -->
+    <!-- User Account: style can be found in dropdown.less -->
+    @{
+        var currentUser = (PHOTOLIO.ViewModel.UserVM)Session["CurrentUser"];
+
+    }
+    <!----------------------------------Nav Bar------------------------------------------------>
+    <section class="saction1">
+        <div class="ST-top ST-white">
+
+            <div class="ST-bar ST-card-2 " id="Nav">
+                <a class="ST-bar-item ST-button ST-hide-medium ST-hide-large ST-right ST-padding-large ST-hover-white  ST-red" href="javascript:void(0);" onclick="mynavFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+                <a href="/Home/Index" class="ST-bar-item ST-button ST-left">HOME</a>
+
+                <div class="ST-dropdown-hover ST-hide-small">
+                    <a href="/Product/List" class="ST-bar-item ST-button ST-hide-small" title="GALLERY">
+                        <i class="fa fa-image"></i> GALLERY @*<i class="fa fa-caret-down"></i>*@
+                    </a>
+
+                    @*<div class="ST-dropdown-content ST-bar-block ST-card-4">
+                            <a href="/Product/GetListByCategoryId?categoryId=1" class="ST-bar-item ST-border ST-hover-blue">Portraits</a>
+                            <a href="/Product/GetListByCategoryId?categoryId=2" class="ST-bar-item ST-border ST-hover-blue">Landscapes</a>
+                        </div>*@
+
+                </div>
+                <a href="/User/Photographers" class="ST-bar-item ST-button ST-hide-small ST-left"><i class="fa fa-camera"></i> PHOTOGRAPHERS</a>
+                <a href="/Map/Locations" class="ST-bar-item ST-button ST-hide-small ST-left"><i class="fa fa-map-o"></i> LOCATIONS</a>
+                <div class="ST-bar-item ST-navlogofont ST-hide-small ST-right " style="margin-right:25px;margin-top:3px;margin-left:25px;">
+                    <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" class="ST-card ST-circle" style="max-height:25px;max-width:25px;" onclick="onClick(this)" />
+                </div>
+                @*<a href="@Url.Action("Myorder", "AddToCart")" class="ST-bar-item ST-button ST-hide-small ST-right ST-hover-red">
+                        <i class="fa fa-shopping-cart"></i> Your Cart <span class="badge">@Session["count"]</span>
+                    </a>*@
+
+                <!-------------------------------------------------------------------------------------------------------------------------------------->
+
+                @if (currentUser == null) //default
+                {
+                    <a href="#" onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="ST-bar-item ST-button ST-hide-small ST-right ST-hover-red"><i class="fa fa-user"></i> Sign Up</a>
+                    <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="ST-bar-item ST-button ST-hide-small ST-right ST-hover-red"><i class="fa fa-sign-in"></i> Login</a>
+                }
+
+                else if (currentUser.PositionId == 1) //admin
+                {
+
+                    <div class="ST-dropdown-hover ST-hide-small ST-right ST-hover-red">
+                        <button class=" ST-button" title="ADMIN" style="min-width:150px;">
+                            @{
+                                @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" class="user-image ST-card" alt="User Image">*@
+                                <img src="/UserProfiles/@(currentUser.Profile)" class="ST-circle user-image ST-card" alt="User Image" />
+                                @currentUser.Name
+                            }
+                        </button>
+                        <div class=" ST-dropdown-content ST-bar-block ST-card"></div>
+                        <div class="ST-dropdown-content ST-bar-block ST-card" style="padding:5px; min-width:220px;">
+                            <!-- User image -->
+
+                            <div style="padding:5px;">
+                                <center>
+                                    @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" style="width:50%; height:90px; padding:5px;" class="ST-circle ST-card-2" alt="Profile" />*@
+                                    <img src="/UserProfiles/@(currentUser.Profile)" style="width:120px; height:120px; padding:5px;" class="ST-circle ST-card-2" alt="Profile" />
+                                </center>
+                            </div>
+                            <div style="padding:2px;">
+                                <b> @currentUser.Name</b>
+                                <p>PHOTOLIO Administrator</p>
+                            </div>
+                            <div style="padding:10px;">
+                                <a href="/Product/Entry" class="ST-bar-item ST-button ST-round ST-light-gray ST-hover-blue ST-border" style="width:100% "><i class="fa fa-plus"></i> Add Photos</a>
+                                @*<a href="/Position/Entry" class="ST-bar-item ST-button ST-round ST-light-gray ST-hover-blue ST-border" style="width:100% "><i class="fa fa-plus"></i> Add Position</a>*@
+                                <a href="/Product/List" class="ST-bar-item ST-button ST-round ST-white ST-hover-blue ST-border" style="width:100% "><i class="fa fa-file-image-o"></i>  Photo List</a>
+                                <a href="/Category/List" class="ST-bar-item ST-button ST-round ST-light-gray ST-hover-blue ST-border" style="width:100% "><i class="fa fa-th"></i> Category List</a>
+                                <a href="/User/List" class="ST-bar-item ST-button ST-round ST-white ST-hover-blue ST-border" style="width:100% "><i class="fa fa-users"></i> User List</a>
+                                <a href="/ContactUs/List" class="ST-bar-item ST-button ST-round ST-light-gray ST-hover-blue ST-border" style="width:100% "><i class="fa fa-envelope"></i> Contact Information</a>
+                                @*<a href="/Order/MyOrderList?userId=1" class="ST-bar-item ST-button ST-hide-small ST-hover-blue ST-padding ST-border" style="width:100% "><i class="fa fa-shopping-cart"></i> Order List</a>*@
+                            </div>
+
+                            @*<div style="padding:10px;">*@
+                            <a href="/User/Edit?Id=@currentUser.Id" class="ST-text-white ST-left ST-button ST-round ST-blue">Profile</a>
+                            <a href="/User/LogOut" class="ST-text-white ST-right ST-border ST-button ST-round ST-red">Sign Out</a>
+                            @*</div>*@
+
+                        </div>
+                    </div>
+                }
+
+
+                else //client
+                {
+                    <div class="ST-dropdown-hover ST-hide-small ST-right">
+                        <button class=" ST-button" title="Client" style="min-width:150px;">
+
+                            @{
+                                @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" class="user-image ST-card" alt="User Image">*@
+                                <img src="/UserProfiles/@(currentUser.Profile)" class="ST-circle user-image ST-card" alt="Profile" />
+                                @currentUser.Name
+                            }
+                        </button>
+
+                        <div class=" ST-dropdown-content ST-bar-block ST-card" style="padding:10px; min-width:220px;">
+                            <!-- User image -->
+                            <div class="card">
+                                <div style="padding:10px;">
+                                    <center>
+                                        @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" style="width:120px; height:120px; padding:5px;" class="ST-circle ST-card-2" alt="Profile" />*@
+                                        <img src="/UserProfiles/@(currentUser.Profile)" style="width:120px; height:120px; padding:5px;" class="ST-circle ST-card-2" alt="Profile" />
+                                    </center>
+                                </div>
+                                <br />
+                                <p>
+                                    <i class="fa fa-user"></i> @currentUser.Name<br />
+                                    <i class="fa fa-info-circle"></i> @currentUser.UserBio<br />
+                                    <i class="fa fa-phone"></i> @currentUser.PhoneNo<br />
+                                    <i class="fa fa-home"></i> @currentUser.FullAddress<br />
+                                    <i class="fa fa-envelope"></i> @currentUser.Email
+                                </p>
+
+                            </div>
+                            <div style="padding-top:10px;">
+                                <a href="/Product/Entry" class="ST-bar-item ST-button  ST-border"><i class="fa fa-camera"></i> <span>UPLOAD PHOTO</span></a>
+                                @*<a href="#" class="ST-bar-item ST-button  ST-border"><i class="fa fa-photo"></i> <span>MY GALLERY</span></a>*@
+                                @*<a href="/Order/MyOrderList?userId=@currentUser.Id" class="ST-bar-item ST-button  ST-border"><i class="fa fa-photo"></i> <span>MY GALLERY</span></a>*@
+
+                            </div>
+                            <div style="padding-top:10px;">
+                                <a href="/User/Edit?Id=@currentUser.Id" class="ST-text-white ST-left ST-button ST-round ST-blue">Profile</a>
+                                <a href="/User/LogOut" class="ST-text-white ST-right ST-border ST-button ST-round ST-red">Sign Out</a>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+
+            </div>
+            <!----------------------Scroll--------------->
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+
+            <!-- Navbar on small screens -->
+
+            <div id="mynav" class="ST-bar-block ST-white ST-hide ST-hide-medium ST-hide-large ">
+                @if (currentUser == null) //default
+                {
+
+                    <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="ST-bar-item ST-button ST-padding-large ST-hover-red"><i class="fa fa-sign-in"></i> Login</a>
+                    <a href="#" onclick="document.getElementById('id02').style.display='block'" style="width:auto;" class="ST-bar-item ST-button ST-padding-large ST-hover-red"><i class="fa fa-user"></i> Sign Up</a>
+                }
+                else
+                {
+                    <a href="/User/Edit?Id=@currentUser.Id" class="ST-bar-item ST-button ST-padding-large">
+                        @*<img src="data:image;base64,@System.Convert.ToBase64String(currentUser.Profile)" class="user-image ST-card" alt="User Image">*@
+                        <img src="~/UserProfiles/RetrieveImage/@currentUser.Id" class="user-image ST-card" alt="User Image" />
+                        @currentUser.Name
+                    </a>
+                }
+                <a href="/Product/List" class="ST-bar-item ST-button ST-padding-large"><i class="fa fa-image"></i> GALLERY</a>
+                <a href="/User/Photographers" class="ST-bar-item ST-button ST-padding-large"><i class="fa fa-camera"></i> PHOTOGRAPHERS</a>
+                <a href="/Map/Locations" class="ST-bar-item ST-button ST-padding-large"><i class="fa fa-map-o"></i> LOCATIONS</a>
+            </div>
+
+        </div>
+        <!--------------------------------------------------End Nav Bar------------------------------------>
+    </section>
+
+    <section class="ST-container">
+        @RenderBody() @*/*Home/Index*/*@
+
+    </section>
+    <footer class="saction8">
+        <div class="container" id="contact">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4" style="text-align:center">
+                    <div class="site">
+                        <h3>Notes :</h3>
+                    </div>
+                    <div class="sitelink">
+                        <span>&#10152;</span><a href="/Home/Team" class="ST-button ST-round  "><i class="fa fa-user"></i> ABOUT US</a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-4" style="text-align:center">
+                    <div class="follow">
+                        <h3>Follow Us On...</h3>
+                    </div>
+                    <div class="social">
+                        <p>
+                            <a href="https://www.facebook.com/photolio.mm/" class="fa fa-facebook " target="_blank"></a>&nbsp;&nbsp;
+                            <a href="https://twitter.com/PHOTOLIO1" class="fa fa-twitter" target="_blank"></a>&nbsp;&nbsp;
+                            <a href="https://www.instagram.com/photolio.mm/" class="fa fa-instagram " target="_blank"></a>
+                            <a href="https://www.linkedin.com/in/si-thu-htet-aung-a42879137/" class="fa fa-linkedin" target="_blank"></a>
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4" style="text-align:center;">
+                    <div class="site">
+                        <h3>Contact Us</h3>
+                    </div>
+                    <div class="sitelink">
+                        <span>&#10152;</span><a href="/ContactUs/Entry"  class="ST-button ST-round  "><i class="fa fa-envelope"></i> CONTACT US</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="saction9">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="email"><b style="color:white">&copy;</b> All right reserved 2019 Powered By <a href="https://www.facebook.com/SiThuHtetAung.AJ" target="_blank"><b style="color:red">Si Thu Htet Aung</b></a> </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @*------------------------------------------------login-----------------------*@
+    @*------------------------------------------------login-----------------------*@
+    <div id="id01" class="mymodal ST-card">
+
+        <form id="frmLogin" class=" animate">
+            <div class="logincontainer mymodal-content">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <div class="row">
+                    <h2 style="text-align:center">Create Account For photographer / LogIn</h2>
+                    <div class="vl">
+                        <span class="vl-innertext">or</span>
+                    </div>
+
+                    <div class="col">
+                        @*<a href='@Url.Action("Facebook", "Home")' class="fb btn">
+                                <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                            </a>
+
+                            <a href="#" class="google btn">
+                                <i class="fa fa-google fa-fw">
+                                </i> Login with Google
+                            </a>*@
+                        <img src="~/wwwroot/dist/images/PhotolioLogo Circle.jpg" class="ST-circle" style="width:85%; height:15%" />
+                        <button name="My" class="loginbtn ST-round ST-hover-gray" type="button" style="display:inline-block" onclick="document.getElementById('id02').style.display='block',document.getElementById('id01').style.display='none'">Create Member Account</button>
+                    </div>
+
+                    <div class="col">
+                        <div class="hide-md-lg">
+                            <p>Or sign in manually:</p>
+                        </div>
+
+                     
+                        <input class="log" type="email" placeholder="Email" name="LoginEmail" id="LoginEmail" required />
+                        <p id="textcaplock">WARNING! Caps lock is ON.</p>
+
+                        <input class="log" type="password" placeholder="Enter Password" name="LoginPassword" id="LoginPassword" required />
+                        <input type="checkbox" onclick="showpasswordFunction()"> Show Password
+                        <button class="loginbtn ST-round ST-hover-gray ST-green" type="button" style="display:inline-block" onclick="LogIn()">Login</button>
+                        <button name="My" type="button" onclick="document.getElementById('id01').style.display='none'" class="loginbtn ST-round ST-red ST-hover-gray">Cancel</button>
+                    </div>
+                </div>
+                
+            </div>
+
+        </form>
+    </div>
+
+    @*-------------------------------------------------Sign up------------------------------------------------------*@
+    <div id="id02" class="mymodal ST-card">
+
+       
+        <form id="frmUser" class="frmUser ">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" style="margin-top:50px; color:white;" title="Close Modal">&times;</span>
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img id="ProfilePrev" src="~/wwwroot/dist/images/profile.png" alt="User" style="width:100px;height:100px; max-width:30%; max-height:30%" class="ST-card ST-circle" /><br />
+                </div>
+                @*<button type="button" id="custom-button" class="ST-button" style="margin-left:140px;"><i class="fa fa-camera"></i></button>
+                    <input style=" margin-top:10px;margin-left:20px; display:none;" type="file" id="selProfile" name="selProfile" accept="image/*" onchange="ShowPreview(this)">*@
+                <p><input style="float:left; margin-bottom:10px;" type="file" id="selProfile" name="selProfile" accept="image/*" onchange="ShowPreview(this)"></p>
+
+                <p><input placeholder="User Name" name="txtUserName" id="txtUserName" onkeypress="enter(event);" oninput="this.className = ''"></p>
+            </div>
+            <div class="tab">
+                Contact Info:
+                <p><input placeholder="Address" name="txtFullAddress" id="txtFullAddress" onkeypress="enter(event);" oninput="this.className = ''"></p>
+                <p><input placeholder="Phone No" name="txtPhoneNo" id="txtPhoneNo" onkeypress="enter(event);" oninput="this.className = ''"></p>
+            </div>
+
+            <div class="tab">
+                Login Info:
+                <p><input placeholder="Email" name="txtEmail" id="txtEmail" onkeypress="enter(event);" oninput="this.className = ''" type="email" required></p>
+                <p><input placeholder="Password" name="txtUserPassword" id="txtUserPassword" onkeypress="enter(event);" oninput="this.className = ''" type="password" required></p>
+            </div>
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button type="button" class="ST-light-gray ST-round ST-hover-light-blue" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" class="ST-blue ST-round" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                </div>
+            </div>
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+        </form>
+
+    </div>
+
+    @*---------------------------------------------------------------------Success MESSAGE---------------------------------------------------*@
+    <div class="modal" id="divSuccess" style="margin-top:80px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <center>
+                        <img src="~/wwwroot/dist/images/PhotolioCircleicon.ico" style="width:50px;height:50px" />
+                        <h4 class="modal-title">Welcome</h4>
+                    </center>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                    <p id="pMessage"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="ST-button ST-round ST-blue" data-dismiss="modal" onclick="window.location.reload()">Ok</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    @*---------------------------------------------------------------------ERROR MESSAGE---------------------------------------------------*@
+    <div class="modal" id="divError" style="margin-top:80px;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <center>
+                        <img src="~/wwwroot/dist/images/PhotolioCircleicon.ico" style="width:50px;height:50px" />
+                        <h4 class="modal-title">Error Message</h4>
+                    </center>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p id="pMessage"><div class="saction1;"><span style="color:red">ERROR !</span></div> <br /> User Name or Password is invalid !</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="ST-button ST-round ST-blue" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <div id="modal010" class="ST-modal" onclick="this.style.display='none'">
+        <span class="ST-white ST-button ST-round ST-hover-red ST-xlarge ST-display-topright">&times;</span>
+        <div class="ST-modal-content ST-animate-zoomimg ST-round">
+            <img id="img01" style="width:60%">
+        </div>
+    </div>
+
+    <script src="~/wwwroot/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/wwwroot/plugins/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/wwwroot/plugins/bootstrap-datetimepicker/js/moment.js"></script>
+    <script src="~/wwwroot/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/wwwroot/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/wwwroot/plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="~/wwwroot/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/wwwroot/plugins/select2/select2.full.min.js"></script>
+    <script src="~/wwwroot/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="~/wwwroot/plugins/bootstrap-datetimepicker/js/moment.js"></script>
+    <script src="~/wwwroot/dist/js/app.min.js"></script>
+
+
+    @RenderSection("scripts", required: false)
+
+    <script>
+        var input = document.getElementById("LoginEmail");
+        var text = document.getElementById("textcaplock");
+        input.addEventListener("keyup", function (event) {
+
+            if (event.getModifierState("CapsLock")) {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none"
+            }
+        });
+    </script>
+    <!--Show Password--------------------------->
+    <script>
+        function showpasswordFunction() {
+            var x = document.getElementById("LoginPassword");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+    <!----------------------For Sign Up----------------->
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Sign Up";
+                document.getElementById("nextBtn").onclick = function () { saveuser() };
+                //document.getElementById('id02').style.display = "none";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Next";
+            }
+            //... and run a function that will display the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("frmUser").saveuser();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    // and set the current valid status to false
+                    valid = false;
+                }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class on the current step:
+            x[n].className += " active";
+        }
+    </script>
+
+    <script>
+        /*------------------------------------------------Profile Upload Button--------------------------*/
+        const realfileBtn = document.getElementById("selProfile")
+        const customBtn = document.getElementById("custom-button")
+        customBtn.addEventListener("click", function () {
+            realfileBtn.click();
+        });
+    </script>
+    <script>
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal010").style.display = "block";
+        }
+    </script>
+    <script src="~/wwwroot/mine/js/User.js"></script>
+</body>
+</html>
+
+

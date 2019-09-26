@@ -14,6 +14,8 @@ namespace PHOTOLIO.Web.Controllers
         // GET: City
         public ActionResult Entry()
         {
+           
+
             CategoryService service = new CategoryService();
             List<CategoryVM> list = service.SelectList();
             return View(list);
@@ -22,6 +24,7 @@ namespace PHOTOLIO.Web.Controllers
         [HttpPost]
         public JsonResult Entry(ProductVM inputVM)
         {
+
             ProductService service = new ProductService();
             int result = service.Save(inputVM);
 

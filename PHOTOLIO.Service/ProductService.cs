@@ -15,14 +15,14 @@ namespace PHOTOLIO.Service
 
         public int Save( ProductVM productVM)
         {
-            using (PHOTOLIODBContext context = new PHOTOLIODBContext())
-            {
-                int count = context.ProductDMs.Where(w => w.IsDelete == false && w.Name == productVM.Name).Count();
-                if(count > 0)
-                {
-                    return 100;
-                }
-            }
+            //using (PHOTOLIODBContext context = new PHOTOLIODBContext())
+            //{
+            //    int count = context.ProductDMs.Where(w => w.IsDelete == false && w.Name == productVM.Name).Count();
+            //    if (count > 0)
+            //    {
+            //        return 100;
+            //    }
+            //}
 
 
 
@@ -190,7 +190,9 @@ namespace PHOTOLIO.Service
                         UpdatedDate = time,
                     });
             }
-        }      
+        }
+
+        
 
     }
 }

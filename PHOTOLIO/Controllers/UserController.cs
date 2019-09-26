@@ -87,6 +87,9 @@ namespace PHOTOLIO.Web.Controllers
         {
             UserService service = new UserService();
             UserVM updateVM = service.SelectById(id);
+            List<ProductVM> productVMs = service.GetProductsByUser(id);
+
+            ViewBag.Products = productVMs;
             return View(updateVM);
         }
 
@@ -133,9 +136,14 @@ namespace PHOTOLIO.Web.Controllers
         {
             UserService service = new UserService();
             UserVM updateVM = service.SelectById(id);
+            List<ProductVM> productVMs = service.GetProductsByUser(id);
+
+            ViewBag.Products = productVMs;
            
             return View(updateVM);
 
         }
+
+      
     }
 }

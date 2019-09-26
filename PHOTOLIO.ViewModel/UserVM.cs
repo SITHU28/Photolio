@@ -19,15 +19,29 @@ namespace PHOTOLIO.ViewModel
         public string FullAddress { get; set; }
         public string PhoneNo { get; set; }
         public string Email { get; set; }       
-        public int ProductId { get; set; }
         public long Version { get; set; }
         public bool IsDelete { get; set; }
         public int CreatedUserId { get; set; }
         public long CreatedDate { get; set; }
         public int UpdatedUserId { get; set; }
         public long UpdatedDate { get; set; }
+        public string Photoshop { get; set; }
+        public string Photography { get; set; }
+        public string Illustrator { get; set; }
+        public string Media { get; set; }
+        public string PremierePro { get; set; }
+        public string Lightroom { get; set; }
+        public string Burmese { get; set; }
+        public string English { get; set; }
+        public string Chinese { get; set; }
+        public string PackageTitle { get; set; }
+        public string AboutPackage { get; set; }
+        public string PackagePrice { get; set; }
+        public int ProductId { get; set; }
+        public ProductVM Product { get; set; }
         public HttpPostedFileWrapper ProfileImage { get; set; }
         public List<PositionVM> PositionVMs { get; set; }
-        public List<ProductVM> ProductVMs { get; set; }
+        public ICollection<ProductVM> ProductVMs { get; set; }
+        
     }
 }
