@@ -134,6 +134,10 @@
       <DependentUpon>DbModel.edmx</DependentUpon>
       <LastGenOutput>DbModel.cs</LastGenOutput>
     </Content>
+    <Content Include="PHOTOLIO.mdf" />
+    <Content Include="PHOTOLIO_log.ldf">
+      <DependentUpon>PHOTOLIO.mdf</DependentUpon>
+    </Content>
     <Content Include="Scripts\json-serialize.js" />
     <Content Include="Scripts\json-serialize.min.js" />
     <Content Include="Web.config">
@@ -575,6 +579,7 @@
     <Content Include="wwwroot\dist\fonts\LobsterTwo-Regular.otf" />
     <Content Include="wwwroot\dist\fonts\Aventurina.otf" />
     <Content Include="wwwroot\dist\fonts\Aventurina.ttf" />
+    <Content Include="_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
